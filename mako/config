@@ -1,0 +1,17 @@
+on-button-left=dismiss
+on-button-right=invoke-default-action
+on-button-middle=dismiss-all
+font=sans 10
+background-color=#2E3440FF
+text-color=#ECEFF4FF
+width=350
+border-size=2
+border-color=#ECEFF4FF
+border-radius=4
+progress-color=#ECEFF4FF
+
+[mode=do-not-disturb]
+invisible=1
+
+[app-name="KDE Connect" summary=WhatsApp]
+invisible=1

@@ -1,0 +1,43 @@
+[CompactMode]
+FontWeight=50
+
+[Desktop Entry]
+DefaultProfile=
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+GlobalViewProps=false
+ShowToolTips=true
+UseTabForSwitchingSplitView=true
+Version=201
+ViewPropsTimestamp=2021,8,5,15,29,18.932
+
+[IconsMode]
+FontWeight=50
+PreviewSize=96
+
+[KPropertiesDialog]
+eDP-1 Height 1366x768=493
+eDP-1 Width 1366x768=425
+
+[MainWindow]
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC0AAACmvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAABSAAACmgAAAFwA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAAgD///8AAAADAAAFVgAAALb8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFVgAAAAIA////AAAEngAAApoAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1 Height 1366x768=500
+eDP-1 Width 1366x768=750
+eDP-1 Window-Maximized 1366x768=true
+eDP-1 XPosition 1366x768=0
+eDP-1 YPosition 1366x768=0
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs
+
+[SettingsDialog]
+eDP-1 Height 1366x768=549
+eDP-1 Width 1366x768=679
+
+[VersionControl]
+enabledPlugins=Git

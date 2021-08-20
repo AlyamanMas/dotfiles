@@ -1,0 +1,12 @@
+{
+  "themes": [
+    {
+      "theme-name": "nord",
+      "fg-color": "rgb(46,52,64)",
+      "bg-color": "rgb(236,239,244)",
+      "link-color": "rgb(191,97,106)",
+      "invert": false,
+      "dark-mode": true
+    }
+  ]
+}
