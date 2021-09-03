@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term konsole
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -160,6 +160,7 @@ input "type:touchpad" {
 
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec alacritty
     # Start your launcher
     bindsym $mod+Shift+d exec $menu
     bindsym $mod+Shift+x exec $menu_apps

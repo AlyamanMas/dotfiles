@@ -1,0 +1,30 @@
+State=AAAA/wAAAAD9AAAAAAAABVYAAAKAAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIBAAAADP////8AAAAAAAAAAA==
+StatusBar=Disabled
+eDP-1 Window-Maximized 1366x768=true
+
+[Desktop Entry]
+DefaultProfile=Konsole Nordic.profile
+
+[General]
+CommandBarLastUsedActions=
+
+[KonsoleWindow]
+FocusFollowsMouse=true
+ShowMenuBarByDefault=false
+
+[MainWindow]
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAABVYAAALMAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIAAAAAAP////8AAAAAAAAAAA==
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+eDP-1 Window-Maximized 1366x768=true
+eDP-1 XPosition 1366x768=0
+eDP-1 YPosition 1366x768=20
+
+[TabBar]
+CloseTabOnMiddleMouseButton=true
+ExpandTabWidth=true
+TabBarPosition=Top
+
+[ThumbnailsSettings]
+ThumbnailSize=500
