@@ -336,6 +336,7 @@ exec mako >> /home/yaman/.logs/mako.log
 # init kdeconnect 
 exec /usr/lib/kdeconnectd
 exec kdeconnect-indicator
+exec nm-applet --indicator
 
 #include /etc/sway/config.d/*
 

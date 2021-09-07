@@ -15,3 +15,6 @@ invisible=1
 
 [app-name="KDE Connect" summary=WhatsApp]
 invisible=1
+
+[app-name="KDE Connect" summary="p!n"]
+invisible=1
