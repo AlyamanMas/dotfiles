@@ -1,8 +1,8 @@
 [Added Associations]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;okularApplication_epub.desktop;org.kde.ark.desktop;org.gnome.Nautilus.desktop;pqiv.desktop;
 application/pdf=org.gnome.Evince.desktop;okularApplication_pdf.desktop;org.inkscape.Inkscape.desktop;wine-extension-pdf.desktop;firefox.desktop;pqiv.desktop;gimp.desktop;krita_pdf.desktop;
-image/jpeg=pqiv.desktop;vimiv.desktop;sxiv.desktop;
-image/png=gimp.desktop;pqiv.desktop;
+image/jpeg=sxiv.desktop;pqiv.desktop;vimiv.desktop;gimagereader-gtk.desktop;okularApplication_kimgio.desktop;wine-extension-jpe.desktop;imv-folder.desktop;krita_jpeg.desktop;gimagereader-qt5.desktop;imv.desktop;wine-extension-jfif.desktop;gimp.desktop;
+image/png=sxiv.desktop;pqiv.desktop;gimp.desktop;vimiv.desktop;gimagereader-gtk.desktop;okularApplication_kimgio.desktop;imv-folder.desktop;gimagereader-qt5.desktop;imv.desktop;krita_png.desktop;wine-extension-png.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;pqiv.desktop;emacs-client.desktop;firefox.desktop;gimagereader-qt5.desktop;gimagereader-gtk.desktop;krita_svg.desktop;okularApplication_txt.desktop;wine-extension-xml.desktop;vim.desktop;wine-extension-txt.desktop;emacs.desktop;
 text/plain=emacs-client.desktop;
 video/x-matroska=mpv.desktop;pqiv.desktop;vlc.desktop;
@@ -11,7 +11,8 @@ x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop;
 [Default Applications]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
 application/pdf=org.gnome.Evince.desktop;
-image/png=pqiv.desktop
+image/jpeg=sxiv.desktop;
+image/png=sxiv.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;
 text/plain=emacs-client.desktop
 video/mkv=mpv.desktop

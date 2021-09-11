@@ -338,6 +338,9 @@ exec /usr/lib/kdeconnectd
 exec kdeconnect-indicator
 exec nm-applet --indicator
 
+# import session vars into dbus to fix screen share through WebRTC
+exec fix-screen-share.sh
+
 #include /etc/sway/config.d/*
 
 

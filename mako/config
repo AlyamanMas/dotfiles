@@ -18,3 +18,6 @@ invisible=1
 
 [app-name="KDE Connect" summary="p!n"]
 invisible=1
+
+[app-name="KDE Connect" summary="YouTube Music"]
+invisible=1
