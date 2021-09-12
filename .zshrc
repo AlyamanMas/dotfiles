@@ -74,6 +74,8 @@ plugins=(git toggle-command-prefix zsh-autosuggestions zsh-history-substring-sea
 
 source $ZSH/oh-my-zsh.sh
 
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
