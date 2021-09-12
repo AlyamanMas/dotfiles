@@ -575,6 +575,7 @@ before packages are loaded."
 
   ;; The following is pasted from: https://www.reddit.com/r/emacs/comments/bfsck6/mu4e_for_dummies/
   ;; and acts as configuration for mu4e
+
   (require 'org-mime)
 
   (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e/")
@@ -586,7 +587,7 @@ before packages are loaded."
   (setq mu4e-get-mail-command "mbsync -c ~/.emacs.d/mu4e/.mbsyncrc -a"
         ;; mu4e-html2text-command "w3m -T text/html" ;;using the default mu4e-shr2text
         mu4e-view-prefer-html t
-        mu4e-update-interval 180
+        mu4e-update-interval 300
         mu4e-headers-auto-update t
         mu4e-compose-signature-auto-include nil
         mu4e-compose-format-flowed t)
@@ -684,7 +685,7 @@ before packages are loaded."
 		                      (mu4e-message-contact-field-matches
 		                       msg '(:from :to :cc :bcc) "alyamanmaasarani@gmail.com")))
           :vars '((user-mail-address . "alyamanmaasarani@gmail.com")
-	                (user-full-name . "User Account1")
+	                (user-full-name . "Alyaman Maasarani")
 	                (mu4e-sent-folder . "/alyamanmaasarani-gmail/[alyamanmaasarani].Sent Mail")
 	                (mu4e-drafts-folder . "/alyamanmaasarani-gmail/[alyamanmaasarani].drafts")
 	                (mu4e-trash-folder . "/alyamanmaasarani-gmail/[alyamanmaasarani].Bin")
@@ -706,6 +707,38 @@ before packages are loaded."
 					                                    ("/alyamanmaasarani-gmail/[alyamanmaasarani].All Mail"  . ?a)
 					                                    ("/alyamanmaasarani-gmail/[alyamanmaasarani].Starred"   . ?r)
 					                                    ("/alyamanmaasarani-gmail/[alyamanmaasarani].drafts"    . ?d)
+					                                    ))))
+         (make-mu4e-context
+          :name "personal" ;;for alyamanxp300-gmail
+          :enter-func (lambda () (mu4e-message "Entering context personal"))
+          :leave-func (lambda () (mu4e-message "Leaving context personal"))
+          :match-func (lambda (msg)
+		                    (when msg
+		                      (mu4e-message-contact-field-matches
+		                       msg '(:from :to :cc :bcc) "alyamanxp300@gmail.com")))
+          :vars '((user-mail-address . "alyamanxp300@gmail.com")
+	                (user-full-name . "Alyaman XP300")
+	                (mu4e-sent-folder . "/alyamanxp300-gmail/[alyamanxp300].Sent Mail")
+	                (mu4e-drafts-folder . "/alyamanxp300-gmail/[alyamanxp300].drafts")
+	                (mu4e-trash-folder . "/alyamanxp300-gmail/[alyamanxp300].Trash")
+	                (mu4e-compose-signature . (concat "Informal Signature\n" "Emacs is awesome!\n"))
+	                (mu4e-compose-format-flowed . t)
+	                (smtpmail-queue-dir . "~/Maildir/alyamanxp300-gmail/queue/cur")
+	                (message-send-mail-function . smtpmail-send-it)
+	                (smtpmail-smtp-user . "alyamanxp300")
+	                (smtpmail-starttls-credentials . (("smtp.gmail.com" 587 nil nil)))
+	                (smtpmail-auth-credentials . (expand-file-name "~/.authinfo.gpg"))
+	                (smtpmail-default-smtp-server . "smtp.gmail.com")
+	                (smtpmail-smtp-server . "smtp.gmail.com")
+	                (smtpmail-smtp-service . 587)
+	                (smtpmail-debug-info . t)
+	                (smtpmail-debug-verbose . t)
+	                (mu4e-maildir-shortcuts . ( ("/alyamanxp300-gmail/INBOX"            . ?i)
+					                                    ("/alyamanxp300-gmail/[alyamanxp300].Sent Mail" . ?s)
+					                                    ("/alyamanxp300-gmail/[alyamanxp300].Trash"     . ?t)
+					                                    ("/alyamanxp300-gmail/[alyamanxp300].All Mail"  . ?a)
+					                                    ("/alyamanxp300-gmail/[alyamanxp300].Starred"   . ?r)
+					                                    ("/alyamanxp300-gmail/[alyamanxp300].drafts"    . ?d)
 					                                    ))))))
   )
 
@@ -730,7 +763,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-roam-completion-everywhere t)
  '(package-selected-packages
    '(cdlatex auctex-lua org-roam moe-theme systemd ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree toc-org spaceline powerline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox spinner orgit org-projectile org-present org-pomodoro org-mime org-download org-bullets open-junk-file nord-theme neotree move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative link-hint insert-shebang indent-guide hydra hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word company-statistics company-shell column-enforce-mode clean-aindent-mode bind-key auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))
- '(warning-suppress-types '((comp) (comp) (comp))))
+ '(warning-suppress-types '((org-roam) (org-roam) (comp) (comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
