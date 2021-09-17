@@ -19,8 +19,8 @@ FontWeight=50
 PreviewSize=96
 
 [KPropertiesDialog]
-eDP-1 Height 1366x768=585
-eDP-1 Width 1366x768=551
+eDP-1 Height 1366x768=493
+eDP-1 Width 1366x768=435
 
 [MainWindow]
 RestorePositionForNextInstance=false
