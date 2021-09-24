@@ -20,7 +20,7 @@ PreviewSize=96
 
 [KPropertiesDialog]
 eDP-1 Height 1366x768=493
-eDP-1 Width 1366x768=435
+eDP-1 Width 1366x768=434
 
 [MainWindow]
 RestorePositionForNextInstance=false

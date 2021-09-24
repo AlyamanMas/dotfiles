@@ -5,6 +5,7 @@ image/jpeg=sxiv.desktop;pqiv.desktop;vimiv.desktop;gimagereader-gtk.desktop;okul
 image/png=sxiv.desktop;pqiv.desktop;gimp.desktop;vimiv.desktop;gimagereader-gtk.desktop;okularApplication_kimgio.desktop;imv-folder.desktop;gimagereader-qt5.desktop;imv.desktop;krita_png.desktop;wine-extension-png.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;pqiv.desktop;emacs-client.desktop;firefox.desktop;gimagereader-qt5.desktop;gimagereader-gtk.desktop;krita_svg.desktop;okularApplication_txt.desktop;wine-extension-xml.desktop;vim.desktop;wine-extension-txt.desktop;emacs.desktop;
 text/plain=emacs-client.desktop;
+video/mp4=mpv.desktop;vlc.desktop;pqiv.desktop;
 video/x-matroska=mpv.desktop;pqiv.desktop;vlc.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop;
 
@@ -16,5 +17,7 @@ image/png=sxiv.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;
 text/plain=emacs-client.desktop
 video/mkv=mpv.desktop
+video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop
+x-scheme-handler/msteams=teams.desktop

@@ -193,3 +193,39 @@ Sep 17 10:39 : update: added /Shades of Fukushima-spYgQCgn_4A.mp3
 Sep 17 10:39 : update: added /Waking Dream-cE5k4sR12q4.mp3
 Sep 17 10:39 : update: added /Loopable Soothing Raining Noise-pmcvPJu8XFA.mp3
 Sep 17 10:40 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 18 10:48 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 18 11:14 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:09 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:09 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:09 : player: played "Pacific Shores-cPaXk3WUCZM.mp3"
+Sep 18 13:12 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:16 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:16 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:16 : player: played "Hokkaido Solitude-vxCc6Vtzvp0.mp3"
+Sep 18 13:16 : exception: Not playing
+Sep 18 13:16 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:16 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:16 : player: played "Humble Stream Ripples-Gny4d7PRkQo.mp3"
+Sep 18 13:17 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:17 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:17 : player: played "Humble Stream Ripples-Gny4d7PRkQo.mp3"
+Sep 18 13:18 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:18 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:18 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:18 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:19 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:21 : player: played "Humble Stream Ripples-Gny4d7PRkQo.mp3"
+Sep 18 13:23 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:26 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 18 13:27 : player: played "Pacific Shores-cPaXk3WUCZM.mp3"
+Sep 20 17:59 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 20 18:17 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 20 18:17 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 20 18:18 : player: played "Pacific Shores-cPaXk3WUCZM.mp3"
+Sep 21 10:03 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 21 10:07 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 21 11:17 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 21 11:44 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Sep 21 11:46 : exception: Failed to open mixer for 'default detected output': no such mixer control: PCM
+Sep 21 11:46 : player: played "Pacific Shores-cPaXk3WUCZM.mp3"
+Sep 21 12:01 : exception: Failed to read mixer for 'default detected output': no such mixer control: PCM
