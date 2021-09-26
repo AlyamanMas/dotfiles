@@ -1,0 +1,6 @@
+package archlinux
+package https://github.com/jhillyerd/plugin-git
+theme agnoster
+theme bobthefish
+theme default
+theme lambda
