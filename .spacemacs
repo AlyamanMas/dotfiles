@@ -74,7 +74,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(rainbow-mode org-roam cdlatex lsp-java graphviz-dot-mode)
+   dotspacemacs-additional-packages '(rainbow-mode cdlatex lsp-java graphviz-dot-mode)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -553,25 +553,25 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (use-package org-roam
-    :ensure t
-    :init
-    (setq org-roam-v2-ack t)
-    :custom
-    (org-roam-directory (file-truename "/home/yaman/Notebooks/org-roam"))
-    :bind (("C-c n l" . org-roam-buffer-toggle)
-           ("C-c n f" . org-roam-node-find)
-           ("C-c n g" . org-roam-graph)
-           ("C-c n i" . org-roam-node-insert)
-           ("C-c n c" . org-roam-capture)
-           ("C-c n a" . org-id-get-create)
-           ("C-c n s" . org-roam-alias-add)
-           ;; Dailies
-           ("C-c n j" . org-roam-dailies-capture-today))
-    :config
-    (org-roam-setup)
-    ;; If using org-roam-protocol
-    (require 'org-roam-protocol))
+  ;; (use-package org-roam
+  ;;   :ensure t
+  ;;   :init
+  ;;   (setq org-roam-v2-ack t)
+  ;;   :custom
+  ;;   (org-roam-directory (file-truename "/home/yaman/Notebooks/org-roam"))
+  ;;   :bind (("C-c n l" . org-roam-buffer-toggle)
+  ;;          ("C-c n f" . org-roam-node-find)
+  ;;          ("C-c n g" . org-roam-graph)
+  ;;          ("C-c n i" . org-roam-node-insert)
+  ;;          ("C-c n c" . org-roam-capture)
+  ;;          ("C-c n a" . org-id-get-create)
+  ;;          ("C-c n s" . org-roam-alias-add)
+  ;;          ;; Dailies
+  ;;          ("C-c n j" . org-roam-dailies-capture-today))
+  ;;   :config
+  ;;   (org-roam-setup)
+  ;;   ;; If using org-roam-protocol
+  ;;   (require 'org-roam-protocol))
   (setq lsp-tex-server 'digestif)
 
   ;; The following is pasted from: https://www.reddit.com/r/emacs/comments/bfsck6/mu4e_for_dummies/
