@@ -53,7 +53,6 @@ sway/#config#~
 sway/config.bak
 sway/config.d/
 sway/config~
-systemd/
 trashrc
 user-dirs.dirs
 user-dirs.locale

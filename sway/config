@@ -338,7 +338,9 @@ exec mako >> /home/yaman/.logs/mako.log
 # init kdeconnect 
 # exec /usr/lib/kdeconnectd
 # exec kdeconnect-indicator
-exec /home/yaman/.local/share/bin/start-kdeconnect.sh
+# exec_always /home/yaman/.local/share/bin/start-kdeconnect.sh
+#
+# replaced everything kdeconnect with the systemd user service, for now
 
 exec nm-applet --indicator
 
