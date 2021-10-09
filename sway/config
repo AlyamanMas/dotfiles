@@ -126,7 +126,7 @@ input "type:touchpad" {
 # -=|    Keybindings    |=-
 #    \=================/
 
-  # Genrally:
+  # General:
   #----------
 
     # Reload the configuration file
@@ -156,6 +156,9 @@ input "type:touchpad" {
     # Screenshot 
     bindsym $mod+z exec grimshot copy screen && wl-paste -t image > "$HOME/Pictures/screenshots/$(date '+%F-%H-%M-%S').png"
     # TODO: Add a screenshot menu
+
+    # Suspend/Sleep
+    bindsym $mod+Shift+backslash exec systemctl suspend
 
   # App Launches:
   #--------------
@@ -341,6 +344,7 @@ exec mako >> /home/yaman/.logs/mako.log
 # exec_always /home/yaman/.local/share/bin/start-kdeconnect.sh
 #
 # replaced everything kdeconnect with the systemd user service, for now
+exec_always kdeconnect-indicator
 
 exec nm-applet --indicator
 
