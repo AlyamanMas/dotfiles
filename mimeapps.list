@@ -8,6 +8,7 @@ text/plain=emacs-client.desktop;
 video/mp4=mpv.desktop;vlc.desktop;pqiv.desktop;
 video/x-matroska=mpv.desktop;pqiv.desktop;vlc.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop;
+x-scheme-handler/mailto=userapp-Evolution-ZHC7A1.desktop;
 
 [Default Applications]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
@@ -21,3 +22,4 @@ video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/mailto=userapp-Evolution-ZHC7A1.desktop
