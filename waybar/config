@@ -7,7 +7,7 @@
     // "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-left": ["idle_inhibitor", "clock", "sway/mode"],
     "modules-center": ["sway/window", "mpd"],
-    "modules-right": ["network", "pulseaudio", "backlight", "battery", "battery#bat2", "cpu", "memory", "tray", "sway/language"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "battery#bat2", "cpu", "memory", "tray", "sway/language"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
