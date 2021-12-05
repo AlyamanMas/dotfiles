@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR LANG:en_US\x2eUTF\x2d8
 SETUVAR --path STEAM_COMPAT_CLIENT_INSTALL_PATH:\x2elocal/share/Steam/
 SETUVAR WINEPREFIX:/home/yaman/DDLCP/
 SETUVAR XDG_CURRENT_DESKTOP:sway

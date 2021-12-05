@@ -14,13 +14,18 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 # Preferred editor
 set $preferred_editor emacsclient -c
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | bemenu | xargs swaymsg exec --
+# set $menu dmenu_path | bemenu | xargs swaymsg exec --
+set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
+# set $menu kickoff
+# for_window [title="^launcher$"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
+# set $menu exec st -t launcher -e /home/yaman/.local/share/bin/swaymsg-launcher.sh
 
 # TODO: make this use an open term instead of launching one, fix piping to swaymsg
 # for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 60 ppt 80 ppt, border pixel 10
@@ -309,7 +314,10 @@ input "type:touchpad" {
       bindsym $mod+Shift+3 move container to workspace 13
       # Note: workspaces can have any name you want, not just numbers.
       # We just use 1-10 as the default.
-
+      
+   # MPD:
+   #-----
+      bindsym $mod+P exec mpc toggle
 #________________________________________________________________________________
 
 
