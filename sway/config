@@ -22,7 +22,10 @@ set $preferred_editor emacsclient -c
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | bemenu | xargs swaymsg exec --
-set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
+# nord
+# set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
+# gruvbox
+set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' | xargs swaymsg exec --
 # set $menu kickoff
 # for_window [title="^launcher$"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
 # set $menu exec st -t launcher -e /home/yaman/.local/share/bin/swaymsg-launcher.sh
@@ -61,17 +64,17 @@ output * bg /usr/share/wallpapers/arch-nord.png fill
 # default layout
 workspace_layout tabbed
 
-  #colors nord             border   bg       fg       indicator  view_border
-  client.focused           #ECEFF4  #434C5E  #ECEFF4  #8FBCBB    #ECEFF4
-  client.focused_inactive  #3B4252  #3B4252  #D8DEE9  #8FBCBB    #3B4252
-  client.unfocused         #3B4252  #3B4252  #D8DEE9  #8FBCBB    #3B4252
-  client.urgent            #BF616A  #434C5E  #ECEFF4  #8FBCBB    #BF616A
+  # #colors nord             border   bg       fg       indicator  view_border
+  # client.focused           #ECEFF4  #434C5E  #ECEFF4  #8FBCBB    #ECEFF4
+  # client.focused_inactive  #3B4252  #3B4252  #D8DEE9  #8FBCBB    #3B4252
+  # client.unfocused         #3B4252  #3B4252  #D8DEE9  #8FBCBB    #3B4252
+  # client.urgent            #BF616A  #434C5E  #ECEFF4  #8FBCBB    #BF616A
 
-# #colors gruvbox          border   bg       fg       indicator  view_border
-# client.focused           #fbf1c7  #282828  #ebdbb2  #8ec07c    #fbf1c7
-# client.focused_inactive  #3c3836  #282828  #a89984  #8ec07c    #282828
-# client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
-# client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
+#colors gruvbox          border   bg       fg       indicator  view_border
+client.focused           #fbf1c7  #282828  #ebdbb2  #8ec07c    #fbf1c7
+client.focused_inactive  #3c3836  #282828  #a89984  #8ec07c    #282828
+client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
+client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
 
 # default border style
 default_border pixel 2
