@@ -1,5 +1,6 @@
 package archlinux
 package https://github.com/jhillyerd/plugin-git
+package https://github.com/lilyball/nix-env.fish
 theme agnoster
 theme bobthefish
 theme default
