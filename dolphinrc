@@ -1,13 +1,17 @@
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC0AAACq/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAABBAAACqwAAAFAA////AAAAAQAAAfEAAAKA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAFIAAAKAAAAAAgD///8AAAADAAAFVgAAALb8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFVgAAAAIA////AAAEmwAAAqsAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+eDP-1 Window-Maximized 1366x768=true
+
 [CompactMode]
-FontWeight=50
+FontWeight=25
 
 [Desktop Entry]
 DefaultProfile=Konsole Nordic.profile
 
 [DetailsMode]
-FontWeight=50
+FontWeight=25
 
 [General]
+BrowseThroughArchives=true
 GlobalViewProps=false
 ShowToolTips=true
 UseTabForSwitchingSplitView=true
@@ -15,19 +19,18 @@ Version=201
 ViewPropsTimestamp=2021,8,5,15,29,18.932
 
 [IconsMode]
-FontWeight=50
+FontWeight=25
 PreviewSize=96
 
 [KPropertiesDialog]
-eDP-1 Height 1366x768=650
-eDP-1 Width 1366x768=551
+eDP-1 Height 1366x768=591
+eDP-1 Width 1366x768=482
 
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAwAAAAAAAAC0AAACmvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAABSAAACmgAAAFwA////AAAAAQAAAfEAAAKA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAFIAAAKAAAAAAgD///8AAAADAAAFVgAAALb8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFVgAAAAIA////AAAEngAAApoAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+RestorePositionForNextInstance=false
 ToolBarsMovable=Disabled
 eDP-1 Height 1366x768=500
 eDP-1 Width 1366x768=750
-eDP-1 Window-Maximized 1366x768=true
 eDP-1 XPosition 1366x768=0
 eDP-1 YPosition 1366x768=0
 
@@ -37,6 +40,3 @@ Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cur
 [SettingsDialog]
 eDP-1 Height 1366x768=549
 eDP-1 Width 1366x768=679
-
-[VersionControl]
-enabledPlugins=Git

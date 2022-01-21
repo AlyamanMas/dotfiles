@@ -42,12 +42,12 @@ seat seat0 xcursor_theme "Breeze_Snow"
 # Aesthetic {{{
 
 # font pango:Fira Code Regular 11
-font pango:Fira Sans 11
+font pango:Open Sans 11
 # font pango:Iosevka Term SS05 11
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/arch-gb-dm-blue12.png fill
+output * bg ~/.local/share/wallpaper.png fill
 #
 # Example configuration:
 #
@@ -87,7 +87,7 @@ focus_on_window_activation focus
 #
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         timeout 350 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -111,7 +111,7 @@ exec swayidle -w \
 #
 input "type:keyboard" {
     # xkb_file ~/.config/us-keymap
-    xkb_layout usmod,ara
+    xkb_layout us,ara
     # xkb_variant ,nodeadkeys,
     xkb_options grp:shift_caps_toggle,caps:escape,compose:rctrl
     xkb_numlock enabled
