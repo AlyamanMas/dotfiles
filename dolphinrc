@@ -29,8 +29,12 @@ eDP-1 Width 1366x768=482
 [MainWindow]
 RestorePositionForNextInstance=false
 ToolBarsMovable=Disabled
+XWAYLAND0 Height 1366x768=699
+XWAYLAND0 Width 1366x768=1334
+XWAYLAND0 Window-Maximized 1366x768=true
 eDP-1 Height 1366x768=500
 eDP-1 Width 1366x768=750
+eDP-1 Window-Maximized 1366x768=true
 eDP-1 XPosition 1366x768=0
 eDP-1 YPosition 1366x768=0
 
