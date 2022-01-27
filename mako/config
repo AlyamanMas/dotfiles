@@ -1,7 +1,7 @@
 on-button-left=dismiss
 on-button-right=invoke-default-action
 on-button-middle=dismiss-all
-font=sans 10
+font=Open Sans 10
 background-color=#282828FF
 text-color=#ebdbb2FF
 width=350

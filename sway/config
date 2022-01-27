@@ -21,7 +21,7 @@ set $preferred_editor emacsclient -c
 # nord
 # set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
 # gruvbox
-set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' | xargs swaymsg exec --
+set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' -f "Iosevka SS05" | xargs swaymsg exec --
 # set $menu kickoff
 # for_window [title="^launcher$"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
 # set $menu exec st -t launcher -e /home/yaman/.local/share/bin/swaymsg-launcher.sh
@@ -131,10 +131,10 @@ input "type:touchpad" {
 # General {{{
 
     # Reload the configuration file
-    bindsym $mod+Shift+parenleft reload
+    bindsym $mod+Shift+F12 reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+parenright "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
+    bindsym $mod+Shift+F10 "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
     # Volume
     bindsym XF86AudioLowerVolume exec pamixer -d 5
@@ -368,12 +368,13 @@ exec fix-screen-share.sh
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-  gsettings set $gnome-schema gtk-theme 'Klaus'
+  gsettings set $gnome-schema gtk-theme 'Adwaita Dark'
   # gsettings set $gnome-schema gtk-theme 'oomox-gruvbox-dark-hard-custom'
-  gsettings set $gnome-schema icon-theme 'Tela-brown-dark'
+  gsettings set $gnome-schema icon-theme 'Tela-dark'
   gsettings set $gnome-schema cursor-theme 'Breeze_Snow'
-  gsettings set $gnome-schema font-name 'Fira Sans 11'
+  gsettings set $gnome-schema font-name 'Open Sans 11'
   gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
+  gsettings set org.gnome.desktop.interface monospace-font-name "Iosevka SS05 10"
 }
 
 # }}}

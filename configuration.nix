@@ -3,12 +3,59 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+
+  # Fonts {{{
+  fonts = {
+    # Install fonts
+    fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" ]; })
+      fira
+      iosevka
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      libertinus
+      emacs-all-the-icons-fonts
+      cantarell-fonts
+      libertinus
+      open-sans
+    ];
+    fontconfig = {
+      defaultFonts.monospace = [ "Iosevka SS05"
+                                 "Iosevka Term SS05"
+                                 "Iosevka"
+                                 "FiraCode Nerd Font"
+                                 "Noto Naskh Arabic UI"
+                                 "Hack"
+                               ];
+      defaultFonts.sansSerif = [ "Open Sans"
+                                 "Cantarell"
+                                 "Noto Kufi Arabic"
+                                 "Noto Naskh Arabic UI"
+                                 "Fira Sans"
+                                 "Inter"
+                                 "Noto Sans"
+                                 "Noto Sans CJK JP Light"
+                               ];
+      defaultFonts.serif = [ "Libertinus Serif"
+                             "Calendas Plus"
+                             "Times New Roman"
+                             "Noto Naskh Arabic UI"
+                             "Noto Serif"
+                             "Noto Serif CJK JP"
+                             "Noto Serif CJK TC"
+                             "Noto Serif CJK HK"
+                           ];
+    includeUserConf = true;
+    };
+  };
+  # }}}
 
   # Switch to Linux-zen
   boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -50,15 +97,15 @@
   # };
   # }}}
 
-  qt5.enable = true;
-  qt5.platformTheme = "kvantum";
+  qt5.enable = false;
+  # qt5.platformTheme = "kvantum";
   # qt5.style = "adwaita-dark";
 
   programs = {
     fish.enable = true;
     sway.enable = true;
     kdeconnect.enable = true;
-    # qt5ct.enable = true; # disabled cause gnome doesn't like 🙂
+    qt5ct.enable = true; # disabled cause gnome doesn't like 🙂
     adb.enable = true;
     xonsh.enable = true;
     zsh = {
@@ -88,6 +135,13 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  # Enable KDE Plasma
+  services.xserver.desktopManager.plasma5.enable = true;
+  programs.ssh.askPassword = "${pkgs.gnome.seahorse}/libexec/seahorse/ssh-askpass";
+
+  # Use Qt5ct
+  environment.variables.QT_QPA_PLATFORMTHEME = "qt5ct";
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -200,7 +254,7 @@
     fastjar mediainfo imagemagick unrar-wrapper
     tmux tabbed
     brave
-    busybox
+    # busybox
     rofi-unwrapped
     gnome.pomodoro
     gnome.adwaita-icon-theme
@@ -219,8 +273,11 @@
     languagetool grip
     nixos-generators
     wordnet
-    gnome.seahorse
+    gnome.seahorse # conflicts with kde for some dumb reason
     ydotool
+    poppler_utils
+    kde-gtk-config
+    nixos-option
   ]) ++ ( with pkgs.python39Packages; [ # Include python39Packages
     isort
     nose
@@ -232,51 +289,6 @@
     yt-dlp
   ] ); # pckgsEnd }}}
 
-  # Fonts {{{
-  fonts = {
-    # Install fonts
-    fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" ]; })
-      fira
-      iosevka
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
-      libertinus
-      emacs-all-the-icons-fonts
-      cantarell-fonts
-      libertinus
-      open-sans
-    ];
-    fontconfig = {
-      defaultFonts.monospace = [ "Iosevka SS05"
-                                 "Iosevka Term SS05"
-                                 "Iosevka"
-                                 "FiraCode Nerd Font"
-                                 "Noto Naskh Arabic UI"
-                               ];
-      defaultFonts.sansSerif = [ "Open Sans"
-                                 "Cantarell"
-                                 "Noto Kufi Arabic"
-                                 "Noto Naskh Arabic UI"
-                                 "Fira Sans"
-                                 "Inter"
-                                 "Noto Sans"
-                                 "Noto Sans CJK JP Light"
-                               ];
-      defaultFonts.serif = [ "Libertinus Serif"
-                             "Calendas Plus"
-                             "Times New Roman"
-                             "Noto Naskh Arabic UI"
-                             "Noto Serif"
-                             "Noto Serif CJK JP"
-                             "Noto Serif CJK TC"
-                             "Noto Serif CJK KR"
-                             "Noto Serif CJK HK"
-                           ];
-    };
-  };
-  # }}}
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -296,6 +308,9 @@
 
   # Enable GVFS (for MTP)
   services.gvfs.enable = true;
+
+  # Override the stupid fontconfig generated by kde
+  environment.etc."fonts/conf.d/52-nixos-default-fonts.conf".enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
