@@ -899,7 +899,11 @@ cursor:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
+key_bindings:
+  - { key: K,            mods: Alt|Shift, mode: ~Alt,  action: ScrollLineUp     }
+  - { key: J,            mods: Alt|Shift, mode: ~Alt,  action: ScrollLineDown   }
+  - { key: D,            mods: Alt|Shift, mode: ~Alt,  action: ScrollPageDown   }
+  - { key: U,            mods: Alt|Shift, mode: ~Alt,  action: ScrollPageUp     }
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
