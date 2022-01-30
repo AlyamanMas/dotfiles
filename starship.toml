@@ -11,7 +11,6 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$hg_branch\
 $package\
 $java\
 $red\
@@ -32,7 +31,7 @@ fish_style_pwd_dir_length = 2
 read_only = " "
 style = "bg:#1d2021"
 read_only_style = "bg:#1d2021 red"
-format = "[$path]($style)[$read_only ]($read_only_style)[ ](#1d2021)"
+format = "[$path]($style)[$read_only ]($read_only_style)[](#1d2021)"
 
 [git_branch]
 symbol = " "
