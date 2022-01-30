@@ -111,7 +111,7 @@ exec swayidle -w \
 #
 input "type:keyboard" {
     # xkb_file ~/.config/us-keymap
-    xkb_layout us,ara
+    xkb_layout usmod,ara
     # xkb_variant ,nodeadkeys,
     xkb_options grp:shift_caps_toggle,caps:escape,compose:rctrl
     xkb_numlock enabled
