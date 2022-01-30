@@ -1,0 +1,58 @@
+# with literal string
+# format = """
+# [$directory$rust$package](bold green)
+# [❯](bold green) """
+
+# Which is equivalent to
+format = """
+[$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$package\
+$java\
+$red\
+$rust\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$time\
+$status\
+$shell](white)\
+$character"""
+
+
+[directory]
+fish_style_pwd_dir_length = 2
+read_only = " "
+style = "bg:#1d2021"
+read_only_style = "bg:#1d2021 red"
+format = "[$path]($style)[$read_only ]($read_only_style)[ ](#1d2021)"
+
+[git_branch]
+symbol = " "
+style = "bg:#1d2021 fg:purple"
+format = "[ ](bg:#1d2021 fg:black)[$symbol$branch]($style) "
+
+[hg_branch]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+style = "bg:blue bold"
+symbol = " "
+format = "via [$symbol($version )]($style)"
+
+[character]
+success_symbol = "[ \\$ ](fg:black bg:green)[](bold green)"
+error_symbol= "[ \\$ ](fg:black bg:red)[](bold red)"
