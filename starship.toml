@@ -27,7 +27,7 @@ format = "[$symbol $number ]($style)"
 disabled = false
 symbol="✖ "
 style = "bg:red fg:#1a1b26"
-format = "[](bg:red fg:black)[$symbol$status ]($style)[](fg:red)"
+format = "[](bg:red fg:#1a1b26)[$symbol$status ]($style)[](fg:red)"
 
 [shell]
 disabled = false
