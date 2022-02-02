@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     // "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-left": ["idle_inhibitor", "clock", "sway/mode"],
+    "modules-left": ["idle_inhibitor", "clock", "sway/mode", "sway/language"],
     "modules-center": ["sway/window", "mpd"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "battery#bat2", "cpu", "memory", "tray", "sway/language"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "battery#bat2", "cpu", "memory", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,

@@ -64,11 +64,17 @@ workspace_layout tabbed
   # client.unfocused         #3B4252  #3B4252  #D8DEE9  #8FBCBB    #3B4252
   # client.urgent            #BF616A  #434C5E  #ECEFF4  #8FBCBB    #BF616A
 
-#colors gruvbox          border   bg       fg       indicator  view_border
-client.focused           #fbf1c7  #282828  #ebdbb2  #8ec07c    #fbf1c7
-client.focused_inactive  #3c3836  #282828  #a89984  #8ec07c    #282828
-client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
-client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
+# #colors gruvbox          border   bg       fg       indicator  view_border
+# client.focused           #fbf1c7  #282828  #ebdbb2  #8ec07c    #fbf1c7
+# client.focused_inactive  #3c3836  #282828  #a89984  #8ec07c    #282828
+# client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
+# client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
+
+# colors Tokyo Night     border   bg       fg       indicator  view_border
+client.focused           #9aa5ce  #16161d  #c0caf5  #9aa5ce    #9aa5ce
+client.focused_inactive  #16161d  #16161d  #c0caf5  #16161d    #16161d
+client.unfocused         #16161d  #16161d  #c0caf5  #16161d    #16161d
+
 
 # default border style
 default_border pixel 2
@@ -349,6 +355,8 @@ bar {
 }
 # }}}
 
+for_window [title="Picture-in-picture"] floating enable
+
 # Autostarts {{{
 
 # init polkit
@@ -362,6 +370,9 @@ exec nm-applet --indicator
 
 # import session vars into dbus to fix screen share through WebRTC
 exec fix-screen-share.sh
+
+# Clipboard manager
+exec wl-paste -t text --watch clipman store
 
 #include /etc/sway/config.d/*
 

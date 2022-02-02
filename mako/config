@@ -2,13 +2,13 @@ on-button-left=dismiss
 on-button-right=invoke-default-action
 on-button-middle=dismiss-all
 font=Open Sans 10
-background-color=#282828FF
-text-color=#ebdbb2FF
+background-color=#1a1b26FF
+text-color=#d9d8d8FF
 width=350
 border-size=2
-border-color=#ebdbb2FF
+border-color=#d9d8d8FF
 border-radius=4
-progress-color=#ebdbb2FF
+progress-color=#d9d8d8FF
 
 [mode=do-not-disturb]
 invisible=1
