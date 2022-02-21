@@ -20,7 +20,7 @@ format = " took [$duration]($style) "
 
 [jobs]
 style = "bg:green fg:#1a1b26"
-format = "[$symbol $number ]($style)"
+format = "[$symbol $number]($style)"
 
 [status]
 disabled = false
@@ -30,6 +30,7 @@ format = "[](bg:red fg:#1a1b26)[$symbol$status ]($style)[](fg:red)"
 
 [shell]
 disabled = false
+fish_indicator = " λ"
 style = "bg:green fg:#1a1b26"
 format = "[$indicator ]($style)[](green)"
 
