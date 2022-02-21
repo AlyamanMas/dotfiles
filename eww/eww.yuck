@@ -1,0 +1,95 @@
+(defwindow example
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "20px"
+                               :height "100%"
+                               :anchor "top left")
+           :stacking "fg"
+           :exclusive "true"
+           :focusable "false"
+  (bar))
+
+
+(defwidget bar []
+  (centerbox :orientation "v"
+    (box :class "segment-top"
+         :valign "start"
+      "hello")
+    (box :valign "center"
+         :class "middle"
+      (middle))
+    (box :valign "end"
+         :class "segment-bottom"
+      (bottom))))
+
+(defwidget middle [] (time))
+(defwidget time []
+  (box :orientation "v"
+       :class "time"
+    hour min sec))
+
+(defpoll hour :interval "1s" "date +%H")
+(defpoll min  :interval "1s" "date +%M")
+(defpoll sec  :interval "1s" "date +%S")
+
+
+(defwidget metric [icon ?font-size]
+  (box :class "metric"
+       :orientation "v"
+    (label :class "metric-icon"
+           :style {font-size != "" ? "font-size: ${font-size}rem;" : ""}
+           :text icon)
+    (children)))
+
+(defwidget bottom []
+  (box :orientation "v"
+       :valign "end"
+       :space-evenly true
+       :spacing "5"
+
+    (metric :icon "" :font-size 1 (music-button))
+
+    (metric :icon "" "${round(EWW_RAM.used_mem_perc, 0)}%")
+
+    (metric :icon "" "${round(EWW_CPU.avg, 0)}%")
+
+    (box :class "metric" (date))))
+
+(defwidget music-button []
+  (button :onclick "playerctl play-pause"
+    "${music_data == "" ? "⏸" : music_data.status == "Playing" ? "⏸" : "▶"}"))
+
+(defwidget volume []
+  (box :class "volume-metric"
+       :orientation "v"
+       :space-evenly false
+       :valign "fill"
+       :vexpand false
+    (scale :orientation "h"
+           :min 0
+           :max 100
+           :onchange "pamixer --set-volume $(echo {} | sed 's/\\..*//g')"
+           :value volume)
+    (eventbox :onscroll "if [ '{}' == 'up' ]; then pamixer -i 5; else pamixer -d 5; fi"
+              :vexpand true
+              :valign "fill"
+      (box :orientation "v"
+           :valign "fill"
+           :vexpand true
+        (button :onclick "./audio.sh toggle"
+          (label :style "font-size: 1.2em; font-family: DejaVuSansMono Nerd Font Mono"
+                 :text audio_sink))
+        (button :onclick "pavucontrol &"
+          "${volume}%")))))
+
+(defvar audio_sink "")
+
+(deflisten volume :initial "0" "./audio.sh volume")
+
+(deflisten music_data
+  :initial `{"status": ""}`
+  `
+  playerctl          metadata --format '{ "status": "{{status}}", "artist": "{{artist}}", "title": "{{title}}"}' || echo '{"status": ""}';
+  # playerctl --follow metadata --format '{ "status": "{{status}}", "artist": "{{artist}}", "title": "{{title}}"}'
+  `)

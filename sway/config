@@ -10,7 +10,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
+set $alternate_term footclient
 # Preferred editor
 set $preferred_editor emacsclient -c
 
@@ -21,10 +22,10 @@ set $preferred_editor emacsclient -c
 # nord
 # set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
 # gruvbox
-set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' -f "Iosevka SS05" | xargs swaymsg exec --
+# set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' -f "Iosevka SS05" | xargs swaymsg exec --
 # set $menu kickoff
-# for_window [title="^launcher$"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
-# set $menu exec st -t launcher -e /home/yaman/.local/share/bin/swaymsg-launcher.sh
+for_window [title="sway-launcher-desktop"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
+set $menu exec footclient -T sway-launcher-desktop ~/git/sway-launcher-desktop/sway-launcher-desktop.sh
 
 # TODO: make this use an open term instead of launching one, fix piping to swaymsg
 # for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 60 ppt 80 ppt, border pixel 10
@@ -163,6 +164,7 @@ input "type:touchpad" {
     # Screenshot 
     bindsym $mod+z exec grimshot copy screen && wl-paste -t image > "$HOME/Pictures/screenshots/$(date '+%F-%H-%M-%S').png"
     # TODO: Add a screenshot menu
+    bindsym $mod+Shift+z exec grimshot copy area && wl-paste -t image > "$HOME/Pictures/screenshots/$(date '+%F-%H-%M-%S').png"
 
     # Suspend/Sleep
     bindsym $mod+Shift+backslash exec systemctl suspend
@@ -173,6 +175,7 @@ input "type:touchpad" {
 
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Control+Return exec $alternate_term
     bindsym $mod+Shift+Return exec $preferred_editor
     # Start your launcher
     bindsym $mod+Shift+d exec $menu
@@ -377,6 +380,9 @@ exec fix-screen-share.sh
 
 # Clipboard manager
 exec wl-paste -t text --watch clipman store
+
+# Foot Daemon
+exec foot --server
 
 #include /etc/sway/config.d/*
 
