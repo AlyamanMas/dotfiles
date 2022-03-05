@@ -171,3 +171,5 @@ startkderc
 systemd/user/emacs.service
 systemd/user/mpd.service
 zathura/zathurarc
+akonadi*
+onlyoffice/
