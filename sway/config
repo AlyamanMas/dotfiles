@@ -48,7 +48,7 @@ font pango:Open Sans 11
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.local/share/wallpaper.png fill
+output * bg /usr/share/wallpapers/arch-gb-dm-blue12.png fill
 #
 # Example configuration:
 #
