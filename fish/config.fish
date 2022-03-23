@@ -1,10 +1,8 @@
 # `PATH` Extensions
 set -a PATH /home/vex/.cargo/bin/
 set -a PATH /home/yaman/.local/share/bin/
-<<<<<<< HEAD
 set -a PATH /home/yaman/.emacs.d/bin/
-sh /home/yaman/.nix-profile/etc/profile.d/nix.sh
-=======
+# sh /home/yaman/.nix-profile/etc/profile.d/nix.sh
 set -a PATH /home/yaman/.local/bin/
 set -a PATH /home/yaman/.emacs.d/bin/
 set -a PATH /home/yaman/.npm-global/bin/
@@ -48,4 +46,3 @@ set -g fish_pager_color_description $comment
 
 
 # sh /home/yaman/.nix-profile/etc/profile.d/nix.sh
->>>>>>> nixos

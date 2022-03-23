@@ -389,11 +389,7 @@ exec foot --server
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-<<<<<<< HEAD
-  gsettings set $gnome-schema gtk-theme 'Gruvbox Material Dark'
-=======
   gsettings set $gnome-schema gtk-theme 'Materia-dark'
->>>>>>> nixos
   # gsettings set $gnome-schema gtk-theme 'oomox-gruvbox-dark-hard-custom'
   gsettings set $gnome-schema icon-theme 'Tela-dark'
   gsettings set $gnome-schema cursor-theme 'Breeze_Snow'
