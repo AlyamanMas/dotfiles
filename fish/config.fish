@@ -5,9 +5,9 @@ set -a PATH /home/yaman/.local/share/bin/
 set -a PATH /home/yaman/.emacs.d/bin/
 sh /home/yaman/.nix-profile/etc/profile.d/nix.sh
 =======
-set -a PATH /home/vex/.local/bin/
-set -a PATH /home/vex/.emacs.d/bin/
-set -a PATH /home/vex/.npm-global/bin/
+set -a PATH /home/yaman/.local/bin/
+set -a PATH /home/yaman/.emacs.d/bin/
+set -a PATH /home/yaman/.npm-global/bin/
 
 # Prompt (Starship)
 starship init fish | source
