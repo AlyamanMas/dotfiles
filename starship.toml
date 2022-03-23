@@ -1,0 +1,73 @@
+# TODO:
+# add `$java\` and configure it
+# configure `$status\` which is disabled by default
+format = """
+[$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$package\
+$cmd_duration\
+$line_break\
+$jobs\
+$shell\
+$status](white) """
+
+# add_newline = false
+
+[cmd_duration]
+format = " took [$duration]($style) "
+
+[jobs]
+style = "bg:green fg:#1a1b26"
+format = "[$symbol $number]($style)"
+
+[status]
+disabled = false
+symbol="✖ "
+style = "bg:red fg:#1a1b26"
+format = "[](bg:red fg:#1a1b26)[$symbol$status ]($style)[](fg:red)"
+
+[shell]
+disabled = false
+fish_indicator = " λ"
+style = "bg:green fg:#1a1b26"
+format = "[$indicator ]($style)[](green)"
+
+[directory]
+fish_style_pwd_dir_length = 2
+read_only = " "
+style = "bg:#24283b"
+read_only_style = "bg:#24283b red"
+format = "[$path]($style)[$read_only ]($read_only_style)[](#24283b)"
+
+[git_branch]
+symbol = " "
+style = "bg:yellow fg:#1a1b26"
+format = "[ ](bg:yellow fg:#1a1b26)[$symbol$branch ]($style)[](yellow)"
+
+[git_commit]
+style = "fg:#1a1b26 bg:red"
+format="[ ](bg:red fg:#1a1b26)[\\($hash$tag\\) ]($style)[](fg:red)"
+
+[git_status]
+style = "fg:red bg:#24283b bold"
+ahead="⇡ "
+behind="⇣ "
+diverged="⇕ "
+format = "([ ](bg:#24283b fg:#1a1b26)[\\[$all_status$ahead_behind\\] ]($style)[](#24283b))"
+
+[package]
+style = "bg:blue #1a1b26"
+format = "[ ](bg:blue fg:#1a1b26)[$version ]($style)[](fg:blue)"
+
+[rust]
+style = "bg:cyan #1a1b26"
+format = "[ ](bg:cyan fg:#1a1b26)[rust ]($style)[$version ]($style)[](fg:cyan)"
+
+[python]
+symbol = " "
+
+[character]
+success_symbol = "[ \\$ ](fg:black bg:green)[](bold green)"
+error_symbol= "[ \\$ ](fg:black bg:red)[](bold red)"

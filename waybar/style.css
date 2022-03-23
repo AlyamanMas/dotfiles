@@ -3,16 +3,18 @@
     border-radius: 20;
     /* `otf-font-awesome` is required to be installed for icons */
 	  /* font-family: monospace; */
-    font-family: "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     min-height: 0;
 }
 
 window#waybar {
     /* background-color: #000000; */
-    background-color: #282828;
+    /* background-color: #282828; */
+    background: #1a1b26;
     /* border-bottom: 3px solid #64727d80; */
-    color: #ebdbb2;
+    /* color: #ebdbb2; */
+    color: #d9d8d8;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -83,7 +85,8 @@ window#waybar.chromium {
 #mpd {
     padding: 0 10px;
     margin: 0 0px;
-    color: #ebdbb2;
+    /* color: #ebdbb2; */
+    color: #d9d8d8;
 }
 
 #window,
@@ -108,7 +111,7 @@ window#waybar.chromium {
 #battery {
     /* background-color: #ebdbb2; */
     /* color: #000000; */
-    border-left: 2px solid #ebdbb2;
+    border-left: 2px solid #d9d8d8;
     padding-right: 0;
 }
 
@@ -119,16 +122,16 @@ window#waybar.chromium {
 
 @keyframes blink {
     to {
-        background-color: #ebdbb2;
-        color: #282828;
+        background-color: #d9d8d8;
+        color: #1a1b26;
         /* background-color: #ebdbb2; */
         /* color: #000000; */
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #bf616a;
-    color: #ebdbb2;
+    background-color: #f7768e;
+    color: #d9d8d8;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -204,7 +207,7 @@ label:focus {
     /* background-color: #3b4252; */
     /* background-color: #2980b9; */
     border-radius: 18px 0 0 18px;
-    border-left: 2px solid #ebdbb2;
+    border-left: 2px solid #d9d8d8;
     padding-left: 10px;
     margin-top: -2px;
 }
@@ -214,27 +217,27 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-    background-color: #ebdbb2;
-    color: #282828;
+    background-color: #d9d8d8;
+    color: #1a1b26;
     border-radius: 0 0 18px 0;
     padding-right: 12px;
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: #7da6ff;
+    color: #1a1b26;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: #ff7a93;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    background-color: #0db9d7;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    background-color: #787c99;
 }
 
 #language {

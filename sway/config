@@ -10,7 +10,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
+set $alternate_term footclient
 # Preferred editor
 set $preferred_editor emacsclient -c
 
@@ -21,10 +22,10 @@ set $preferred_editor emacsclient -c
 # nord
 # set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
 # gruvbox
-set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' | xargs swaymsg exec --
+# set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' -f "Iosevka SS05" | xargs swaymsg exec --
 # set $menu kickoff
-# for_window [title="^launcher$"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
-# set $menu exec st -t launcher -e /home/yaman/.local/share/bin/swaymsg-launcher.sh
+for_window [title="sway-launcher-desktop"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
+set $menu exec footclient -T sway-launcher-desktop ~/git/sway-launcher-desktop/sway-launcher-desktop.sh
 
 # TODO: make this use an open term instead of launching one, fix piping to swaymsg
 # for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 60 ppt 80 ppt, border pixel 10
@@ -42,12 +43,12 @@ seat seat0 xcursor_theme "Breeze_Snow"
 # Aesthetic {{{
 
 # font pango:Fira Code Regular 11
-font pango:Fira Sans 11
+font pango:Open Sans 11
 # font pango:Iosevka Term SS05 11
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/arch-gb-dm-blue12.png fill
+output * bg ~/.local/share/wallpaper.png fill
 #
 # Example configuration:
 #
@@ -64,11 +65,17 @@ workspace_layout tabbed
   # client.unfocused         #3B4252  #3B4252  #D8DEE9  #8FBCBB    #3B4252
   # client.urgent            #BF616A  #434C5E  #ECEFF4  #8FBCBB    #BF616A
 
-#colors gruvbox          border   bg       fg       indicator  view_border
-client.focused           #fbf1c7  #282828  #ebdbb2  #8ec07c    #fbf1c7
-client.focused_inactive  #3c3836  #282828  #a89984  #8ec07c    #282828
-client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
-client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
+# #colors gruvbox          border   bg       fg       indicator  view_border
+# client.focused           #fbf1c7  #282828  #ebdbb2  #8ec07c    #fbf1c7
+# client.focused_inactive  #3c3836  #282828  #a89984  #8ec07c    #282828
+# client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
+# client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
+
+# colors Tokyo Night     border   bg       fg       indicator  view_border
+client.focused           #9aa5ce  #16161d  #c0caf5  #9aa5ce    #9aa5ce
+client.focused_inactive  #16161d  #16161d  #c0caf5  #16161d    #16161d
+client.unfocused         #16161d  #16161d  #c0caf5  #16161d    #16161d
+
 
 # default border style
 default_border pixel 2
@@ -87,7 +94,7 @@ focus_on_window_activation focus
 #
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         timeout 350 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -131,10 +138,10 @@ input "type:touchpad" {
 # General {{{
 
     # Reload the configuration file
-    bindsym $mod+Shift+parenleft reload
+    bindsym $mod+Shift+F12 reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+parenright "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
+    bindsym $mod+Shift+F10 "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
     # Volume
     bindsym XF86AudioLowerVolume exec pamixer -d 5
@@ -157,6 +164,7 @@ input "type:touchpad" {
     # Screenshot 
     bindsym $mod+z exec grimshot copy screen && wl-paste -t image > "$HOME/Pictures/screenshots/$(date '+%F-%H-%M-%S').png"
     # TODO: Add a screenshot menu
+    bindsym $mod+Shift+z exec grimshot copy area && wl-paste -t image > "$HOME/Pictures/screenshots/$(date '+%F-%H-%M-%S').png"
 
     # Suspend/Sleep
     bindsym $mod+Shift+backslash exec systemctl suspend
@@ -167,6 +175,7 @@ input "type:touchpad" {
 
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Control+Return exec $alternate_term
     bindsym $mod+Shift+Return exec $preferred_editor
     # Start your launcher
     bindsym $mod+Shift+d exec $menu
@@ -295,6 +304,8 @@ input "type:touchpad" {
       bindsym $mod+1 workspace 11
       bindsym $mod+2 workspace 12
       bindsym $mod+3 workspace 13
+      bindsym $mod+m workspace 14
+      bindsym $mod+n workspace 15
 
       # Move focused container to workspace
       bindsym $mod+Control+q move container to workspace 1
@@ -310,6 +321,8 @@ input "type:touchpad" {
       bindsym $mod+Shift+1 move container to workspace 11
       bindsym $mod+Shift+2 move container to workspace 12
       bindsym $mod+Shift+3 move container to workspace 13
+      bindsym $mod+Control+m move container to workspace 14
+      bindsym $mod+Control+n move container to workspace 15
       # Note: workspaces can have any name you want, not just numbers.
       # We just use 1-10 as the default.
 
@@ -349,6 +362,8 @@ bar {
 }
 # }}}
 
+for_window [title="Picture-in-picture"] floating enable
+
 # Autostarts {{{
 
 # init polkit
@@ -363,17 +378,28 @@ exec nm-applet --indicator
 # import session vars into dbus to fix screen share through WebRTC
 exec fix-screen-share.sh
 
+# Clipboard manager
+exec wl-paste -t text --watch clipman store
+
+# Foot Daemon
+exec foot --server
+
 #include /etc/sway/config.d/*
 
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
+<<<<<<< HEAD
   gsettings set $gnome-schema gtk-theme 'Gruvbox Material Dark'
+=======
+  gsettings set $gnome-schema gtk-theme 'Adwaita Dark'
+>>>>>>> nixos
   # gsettings set $gnome-schema gtk-theme 'oomox-gruvbox-dark-hard-custom'
-  gsettings set $gnome-schema icon-theme 'Tela-brown-dark'
+  gsettings set $gnome-schema icon-theme 'Tela-dark'
   gsettings set $gnome-schema cursor-theme 'Breeze_Snow'
-  gsettings set $gnome-schema font-name 'Fira Sans 11'
+  gsettings set $gnome-schema font-name 'Open Sans 11'
   gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
+  gsettings set org.gnome.desktop.interface monospace-font-name "Iosevka SS05 10"
 }
 
 # }}}

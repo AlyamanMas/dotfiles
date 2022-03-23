@@ -1,0 +1,9 @@
+* TODO add nixos config to repo/branch
+* TODO learn homemanager and add it (as a seperate repo?)
+* Sway:
+** TODO change cursor
+** TODO change right alt to win
+** TODO change {right,left} alt to delete word (ydotool?) // perhaps when only right alt is pressed and released
+** TODO add KDE Connect screenshot integration
+** TODO add keys to lock and stop screen from sleeping
+** TODO fix KDEConnect
