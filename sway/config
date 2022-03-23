@@ -368,7 +368,7 @@ exec fix-screen-share.sh
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-  gsettings set $gnome-schema gtk-theme 'Klaus'
+  gsettings set $gnome-schema gtk-theme 'Gruvbox Material Dark'
   # gsettings set $gnome-schema gtk-theme 'oomox-gruvbox-dark-hard-custom'
   gsettings set $gnome-schema icon-theme 'Tela-brown-dark'
   gsettings set $gnome-schema cursor-theme 'Breeze_Snow'
