@@ -24,18 +24,11 @@ FontWeight=25
 PreviewSize=96
 
 [KPropertiesDialog]
-<<<<<<< HEAD
 eDP-1 Height 1366x768=545
-eDP-1 Width 1366x768=474
-
-[MainWindow]
-=======
-eDP-1 Height 1366x768=591
-eDP-1 Width 1366x768=482
+eDP-1 Width 1366x768=493
 
 [MainWindow]
 RestorePositionForNextInstance=false
->>>>>>> nixos
 ToolBarsMovable=Disabled
 XWAYLAND0 Height 1366x768=699
 XWAYLAND0 Width 1366x768=1334

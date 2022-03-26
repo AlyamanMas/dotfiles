@@ -173,3 +173,4 @@ systemd/user/mpd.service
 zathura/zathurarc
 akonadi*
 onlyoffice/
+fish/functions/base16*

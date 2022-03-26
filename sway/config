@@ -25,7 +25,7 @@ set $preferred_editor emacsclient -c
 # set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' -f "Iosevka SS05" | xargs swaymsg exec --
 # set $menu kickoff
 for_window [title="sway-launcher-desktop"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
-set $menu exec footclient -T sway-launcher-desktop ~/git/sway-launcher-desktop/sway-launcher-desktop.sh
+set $menu exec footclient -T sway-launcher-desktop sway-launcher-desktop
 
 # TODO: make this use an open term instead of launching one, fix piping to swaymsg
 # for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 60 ppt 80 ppt, border pixel 10
@@ -48,7 +48,7 @@ font pango:Open Sans 11
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/arch-gb-dm-blue12.png fill
+output * bg /home/yaman/.local/share/wallpapers/wallpaper-one-dark.png fill
 #
 # Example configuration:
 #
@@ -71,11 +71,15 @@ workspace_layout tabbed
 # client.unfocused         #3c3836  #282828  #a89984  #8ec07c    #282828
 # client.urgent            #fb4934  #282828  #ebdbb2  #8ec07c    #fb4934
 
-# colors Tokyo Night     border   bg       fg       indicator  view_border
-client.focused           #9aa5ce  #16161d  #c0caf5  #9aa5ce    #9aa5ce
-client.focused_inactive  #16161d  #16161d  #c0caf5  #16161d    #16161d
-client.unfocused         #16161d  #16161d  #c0caf5  #16161d    #16161d
+# # colors Tokyo Night     border   bg       fg       indicator  view_border
+# client.focused           #9aa5ce  #16161d  #c0caf5  #9aa5ce    #9aa5ce
+# client.focused_inactive  #16161d  #16161d  #c0caf5  #16161d    #16161d
+# client.unfocused         #16161d  #16161d  #c0caf5  #16161d    #16161d
 
+# colors OneDark         border   bg       fg       indicator  view_border
+client.focused           #1e2127  #1e2127  #abb2bf  #61afef    #61afef
+client.focused_inactive  #17191d  #17191d  #4d5a5e  #17191d    #17191d
+client.unfocused         #17191d  #17191d  #4d5a5e  #17191d    #17191d
 
 # default border style
 default_border pixel 2
@@ -120,7 +124,8 @@ input "type:keyboard" {
     # xkb_file ~/.config/us-keymap
     xkb_layout usmod,ara
     # xkb_variant ,nodeadkeys,
-    xkb_options grp:shift_caps_toggle,caps:escape,compose:rctrl
+    #,caps:escape
+    xkb_options grp:shift_caps_toggle,compose:rctrl
     xkb_numlock enabled
     repeat_delay 250
     repeat_rate 20

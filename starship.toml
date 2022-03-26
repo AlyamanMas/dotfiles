@@ -19,51 +19,50 @@ $status](white) """
 format = " took [$duration]($style) "
 
 [jobs]
-style = "bg:green fg:#1a1b26"
+style = "bg:green fg:#1e2127"
 format = "[$symbol $number]($style)"
 
 [status]
 disabled = false
-symbol="✖ "
-style = "bg:red fg:#1a1b26"
-format = "[](bg:red fg:#1a1b26)[$symbol$status ]($style)[](fg:red)"
+symbol=" ✖ "
+style = "bg:red fg:#1e2127"
+format = "[](bg:red fg:#1e2127)[$symbol$status ]($style)[](fg:red)"
 
 [shell]
 disabled = false
 fish_indicator = " λ"
-style = "bg:green fg:#1a1b26"
-format = "[$indicator ]($style)[](green)"
+format = "[$indicator ](bg:green fg:#1e2127)[](green)"
 
 [directory]
 fish_style_pwd_dir_length = 2
 read_only = " "
-style = "bg:#24283b"
-read_only_style = "bg:#24283b red"
-format = "[$path]($style)[$read_only ]($read_only_style)[](#24283b)"
+style = "bg:#282c34"
+read_only_style = "bg:#282c34 red"
+format = "[$path]($style)[$read_only ]($read_only_style)[](#282c34)"
 
 [git_branch]
 symbol = " "
-style = "bg:yellow fg:#1a1b26"
-format = "[ ](bg:yellow fg:#1a1b26)[$symbol$branch ]($style)[](yellow)"
+style = "bg:yellow fg:#1e2127"
+format = "[ ](bg:yellow fg:#1e2127)[$symbol$branch ]($style)[](yellow)"
 
 [git_commit]
-style = "fg:#1a1b26 bg:red"
-format="[ ](bg:red fg:#1a1b26)[\\($hash$tag\\) ]($style)[](fg:red)"
+style = "fg:#1e2127 bg:red"
+format="[ ](bg:red fg:#1e2127)[\\($hash$tag\\) ]($style)[](fg:red)"
 
 [git_status]
-style = "fg:red bg:#24283b bold"
+style = "fg:red bg:#282c34 bold"
 ahead="⇡ "
 behind="⇣ "
 diverged="⇕ "
-format = "([ ](bg:#24283b fg:#1a1b26)[\\[$all_status$ahead_behind\\] ]($style)[](#24283b))"
+format = "([ ](bg:#282c34 fg:#1e2127)[\\[$all_status$ahead_behind\\] ]($style)[](#282c34))"
 
 [package]
-style = "bg:blue #1a1b26"
-format = "[ ](bg:blue fg:#1a1b26)[$version ]($style)[](fg:blue)"
+style = "bg:blue #1e2127"
+format = "[ ](bg:blue fg:#1e2127)[$version ]($style)[](fg:blue)"
 
 [rust]
-style = "bg:cyan #1a1b26"
-format = "[ ](bg:cyan fg:#1a1b26)[rust ]($style)[$version ]($style)[](fg:cyan)"
+style = "bg:cyan #1e2127"
+format = "[ ](bg:cyan fg:#1e2127)[rust ]($style)[$version ]($style)[](fg:cyan)"
 
 [python]
 symbol = " "

@@ -1,78 +1,25 @@
 [Added Associations]
-application/epub+zip=com.github.johnfactotum.Foliate.desktop;okularApplication_epub.desktop;org.kde.ark.desktop;org.gnome.Nautilus.desktop;pqiv.desktop;
-application/json=emacs-client.desktop;firefox.desktop;org.kde.itinerary.desktop;org.kde.kate.desktop;org.kde.kwrite.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;code-oss.desktop;nvim.desktop;emacs.desktop;emacsclient.desktop;vim.desktop;wine-extension-txt.desktop;
-application/pdf=okularApplication_pdf.desktop;org.gnome.Evince.desktop;org.inkscape.Inkscape.desktop;wine-extension-pdf.desktop;firefox.desktop;pqiv.desktop;gimp.desktop;krita_pdf.desktop;libreoffice-draw.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;okularApplication_pdf.desktop;libreoffice-draw.desktop;wine-extension-pdf.desktop;brave-browser.desktop;krita_pdf.desktop;org.kde.itinerary.desktop;org.gnome.Evince.desktop;firefox.desktop;gimp.desktop;pqiv.desktop;org.inkscape.Inkscape.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
-image/jpeg=sxiv.desktop;pqiv.desktop;vimiv.desktop;gimagereader-gtk.desktop;okularApplication_kimgio.desktop;wine-extension-jpe.desktop;imv-folder.desktop;krita_jpeg.desktop;gimagereader-qt5.desktop;imv.desktop;wine-extension-jfif.desktop;gimp.desktop;
-image/png=sxiv.desktop;pqiv.desktop;gimp.desktop;vimiv.desktop;gimagereader-gtk.desktop;okularApplication_kimgio.desktop;imv-folder.desktop;gimagereader-qt5.desktop;imv.desktop;krita_png.desktop;wine-extension-png.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;pqiv.desktop;emacs-client.desktop;firefox.desktop;gimagereader-qt5.desktop;gimagereader-gtk.desktop;krita_svg.desktop;okularApplication_txt.desktop;wine-extension-xml.desktop;vim.desktop;wine-extension-txt.desktop;emacs.desktop;
-image/x-portable-pixmap=sxiv.desktop;
 text/html=firefox.desktop;
-<<<<<<< HEAD
-text/plain=emacs-client.desktop;
-video/mp4=mpv.desktop;vlc.desktop;pqiv.desktop;
-=======
-text/plain=emacs-client.desktop;emacsclient.desktop;
-video/mp4=mpv.desktop;vlc.desktop;pqiv.desktop;
-video/webm=mpv.desktop;nyxt.desktop;umpv.desktop;org.gnome.Totem.desktop;
->>>>>>> nixos
-video/x-matroska=mpv.desktop;pqiv.desktop;vlc.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
-<<<<<<< HEAD
-x-scheme-handler/mailto=userapp-Evolution-ZHC7A1.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop;
-=======
-x-scheme-handler/mailto=userapp-Evolution-ZHC7A1.desktop;userapp-Evolution-LDUJI1.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop;userapp-Telegram Desktop-YA8AF1.desktop;userapp-Telegram Desktop-UNX0F1.desktop;
->>>>>>> nixos
 
 [Default Applications]
-application/epub+zip=com.github.johnfactotum.Foliate.desktop;
-application/json=emacs-client.desktop;
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
-image/jpeg=sxiv.desktop;
-image/png=sxiv.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;
-image/x-portable-pixmap=sxiv.desktop
-<<<<<<< HEAD
 text/html=firefox.desktop
-text/plain=emacs-client.desktop
-video/mkv=mpv.desktop
-video/mp4=mpv.desktop;
-video/x-matroska=mpv.desktop;
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
-x-scheme-handler/mailto=userapp-Evolution-ZHC7A1.desktop
-x-scheme-handler/msteams=teams.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-7W4P70.desktop
-=======
-text/html=brave-browser.desktop
-text/plain=emacsclient.desktop
-video/mkv=mpv.desktop
-video/mp4=mpv.desktop;
-video/webm=mpv.desktop;
-video/x-matroska=mpv.desktop;
-x-scheme-handler/about=brave-browser.desktop
-x-scheme-handler/chrome=firefox.desktop
-x-scheme-handler/http=brave-browser.desktop
-x-scheme-handler/https=brave-browser.desktop
-x-scheme-handler/mailto=userapp-Evolution-LDUJI1.desktop
-x-scheme-handler/msteams=teams.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-UNX0F1.desktop
-x-scheme-handler/unknown=brave-browser.desktop
-x-scheme-handler/webcal=brave-browser.desktop
->>>>>>> nixos
