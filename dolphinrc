@@ -24,8 +24,8 @@ FontWeight=25
 PreviewSize=96
 
 [KPropertiesDialog]
-eDP-1 Height 1366x768=545
-eDP-1 Width 1366x768=493
+eDP-1 Height 1366x768=681
+eDP-1 Width 1366x768=572
 
 [MainWindow]
 RestorePositionForNextInstance=false
@@ -35,7 +35,12 @@ XWAYLAND0 Width 1366x768=1334
 XWAYLAND0 Window-Maximized 1366x768=true
 eDP-1 Height 1366x768=500
 eDP-1 Width 1366x768=750
+eDP-1 Window-Maximized 1241x698=true
 eDP-1 Window-Maximized 1366x768=true
+eDP-1 Window-Maximized 1821x1024=true
+eDP-1 Window-Maximized 2732x1536=true
+eDP-1 Window-Maximized 683x384=true
+eDP-1 Window-Maximized 768x1366=true
 eDP-1 XPosition 1366x768=0
 eDP-1 YPosition 1366x768=0
 

@@ -1,25 +1,40 @@
 [Added Associations]
+application/epub+zip=com.github.johnfactotum.Foliate.desktop;org.pwmt.zathura-pdf-mupdf.desktop;calibre-ebook-edit.desktop;calibre-ebook-viewer.desktop;calibre-gui.desktop;okularApplication_epub.desktop;org.kde.ark.desktop;org.gnome.Nautilus.desktop;pqiv.desktop;
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;okularApplication_pdf.desktop;libreoffice-draw.desktop;wine-extension-pdf.desktop;brave-browser.desktop;krita_pdf.desktop;org.kde.itinerary.desktop;org.gnome.Evince.desktop;firefox.desktop;gimp.desktop;pqiv.desktop;org.inkscape.Inkscape.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
+application/x-perl=emacs-client.desktop;org.kde.kate.desktop;org.kde.kwrite.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;code-oss.desktop;org.xfce.mousepad.desktop;emacs.desktop;wine-extension-txt.desktop;nvim.desktop;emacsclient.desktop;vim.desktop;
 application/xhtml+xml=firefox.desktop;
+image/jpeg=sxiv.desktop;org.kde.gwenview.desktop;waterfox-g4.desktop;org.kde.kolourpaint.desktop;org.xfce.ristretto.desktop;krita_jpeg.desktop;imv-folder.desktop;imv.desktop;gimagereader-gtk.desktop;okularApplication_kimgio.desktop;brave-browser.desktop;pqiv.desktop;gimp.desktop;wine-extension-jfif.desktop;vimiv.desktop;wine-extension-jpe.desktop;gimagereader-qt6.desktop;nsxiv.desktop;netsurf.desktop;
+image/png=sxiv.desktop;
 text/html=firefox.desktop;
+text/x-verilog=emacs-client.desktop;org.kde.kate.desktop;org.kde.kwrite.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;nvim.desktop;wine-extension-txt.desktop;code-oss.desktop;emacsclient.desktop;emacs.desktop;vim.desktop;org.xfce.mousepad.desktop;
+video/mp4=mpv.desktop;org.xfce.Parole.desktop;vlc.desktop;org.kde.dragonplayer.desktop;pqiv.desktop;
+video/x-matroska=mpv.desktop;pqiv.desktop;org.kde.dragonplayer.desktop;org.xfce.Parole.desktop;vlc.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 
 [Default Applications]
+application/epub+zip=com.github.johnfactotum.Foliate.desktop;
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
+application/x-perl=emacs-client.desktop;
 application/xhtml+xml=firefox.desktop
+image/jpeg=sxiv.desktop;
+image/png=sxiv.desktop
 text/html=firefox.desktop
+text/x-verilog=emacs-client.desktop;
+video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
+x-scheme-handler/msteams=teams.desktop

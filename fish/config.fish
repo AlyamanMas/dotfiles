@@ -15,6 +15,11 @@ end
 # Prompt (Starship)
 starship init fish | source
 
+# Keybindings
+function fish_user_key_bindings
+  bind \el 'printf \n; el -G; commandline -f repaint'
+end
+
 # # TokyoNight Color Palette
 # set -l foreground c0caf5
 # set -l selection 33467C

@@ -194,4 +194,7 @@ label:focus {
   /* margin: 0 5px; */
   min-width: 16px; }
 
+label#backlight {
+  padding-top: 2px; }
+
 /*# sourceMappingURL=style.css.map */

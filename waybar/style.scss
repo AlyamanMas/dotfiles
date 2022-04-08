@@ -1,0 +1,275 @@
+@import "./scss-bare/_base16-onedark.scss";
+@mixin section-seg($bgcolor: $base0C, $edge: none) {
+    background-color: $bgcolor;
+    color: $base00;
+
+    @if $edge == right {
+        border-right: 2px solid $bgcolor;
+        border-radius: 0 20px 20px 0;
+        margin-right: 0.5rem;
+    } @else if $edge == left {
+        border-left: 2px solid $bgcolor;
+        border-radius: 20px 0 0 20px;
+        margin-left: 0.5rem;
+    }
+}
+
+$media-section-bg: $base0A;
+
+* {
+    border: none;
+    // border-radius: 20;
+
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: monospace; */
+    font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    /* background-color: #000000; */
+    /* background-color: #282828; */
+    background: $base00;
+
+    /* border-bottom: 3px solid #64727d80; */
+    /* color: #ebdbb2; */
+    color: $base05;
+    transition-property: background-color;
+    transition-duration: .5s;
+
+    &.hidden {
+        opacity: 0.2;
+    }
+
+    &.termite {
+        background-color: #3F3F3F;
+    }
+
+    &.chromium {
+        background-color: #000000;
+        border: none;
+    }
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #EBDBB2;
+}
+*/
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ebdbb2;
+
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 -3px #ebdbb2;
+    }
+
+    &.focused {
+        background-color: #64727D;
+        box-shadow: inset 0 -3px #ebdbb2;
+    }
+
+    &.urgent {
+        background-color: #eb4d4b;
+    }
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+#mode {
+    background-color: $base01;
+    border-bottom: 3px solid $base04;
+}
+
+#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
+    padding: 0 10px;
+    margin: 0 0px;
+
+    /* color: #ebdbb2; */
+    color: $base05;
+}
+
+#window, #workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    /* background-color: #64727D; */
+}
+
+#battery {
+    @include section-seg($edge: left);
+    // padding-right: 0;
+
+    &.charging, &.plugged {
+        /* color: #ebdbb2; */
+        /* background-color: #26A65B; */
+    }
+
+    &.critical:not(.charging) {
+        background-color: $base08;
+        color: $base05;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes blink {
+    to {
+        background-color: $base05;
+        color: $base00;
+
+        /* background-color: #ebdbb2; */
+        /* color: #000000; */
+    }
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    /* background-color: #2ecc71; */
+    /* color: #000000; */
+    // padding-right: 0;
+    @include section-seg();
+}
+
+#memory {
+    /* background-color: #9b59b6; */
+    @include section-seg($edge: right);
+}
+
+#disk {
+    /* background-color: #964B00; */
+}
+
+#backlight {
+    /* background-color: #90b1b1; */
+    @include section-seg($bgcolor: $media-section-bg, $edge: right);
+}
+
+#network {
+    /* background-color: #2980b9; */
+
+    &.disconnected {
+        /* background-color: #f53c3c; */
+    }
+}
+
+#pulseaudio {
+    /* background-color: #f1c40f; */
+    /* color: #000000; */
+    /* border-left: 2px solid #ebdbb2; */
+    // padding-right: 0;
+    @include section-seg($bgcolor: $media-section-bg, $edge: left);
+
+    &.muted {
+        /* background-color: #90b1b1; */
+        /* color: #2a5c45; */
+    }
+}
+
+#custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 100px;
+
+    &.custom-spotify {
+        background-color: #66cc99;
+    }
+
+    &.custom-vlc {
+        background-color: #ffa000;
+    }
+}
+
+#temperature {
+    background-color: #f0932b;
+
+    &.critical {
+        background-color: #eb4d4b;
+    }
+}
+
+#tray {
+    /* background-color: #3b4252; */
+    /* background-color: #2980b9; */
+    // border-radius: 18px 0 0 18px;
+    // border-left: 2px solid $base05;
+    @include section-seg($base01, left);
+    font-family: sans-serif;
+    padding-left: 10px;
+    margin-top: -2px;
+}
+
+#idle_inhibitor {
+    /* background-color: #2d3436; */
+
+    &.activated {
+        background-color: $base05;
+        color: $base00;
+        border-radius: 0 0 18px 0;
+        padding-right: 12px;
+    }
+}
+
+#mpd {
+    background-color: $base0D;
+    color: $base00;
+
+    &.disconnected {
+        background-color: $base08;
+    }
+
+    &.stopped {
+        background-color: $base0E;
+    }
+
+    &.paused {
+        background-color: $base01;
+    }
+}
+
+#language {
+    /* background-color: #3b4252; */
+    border-radius: 0;
+
+    /* background: #00b093; */
+    /* color: #740864; */
+    padding: 0 5px 0 0;
+
+    /* margin: 0 5px; */
+    min-width: 16px;
+}
+
+// fix backlight being a bit more aligned to the top than the others
+// (with material icons)
+label#backlight {
+    padding-top: 2px;
+}

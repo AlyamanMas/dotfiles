@@ -56,8 +56,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "<big></big> ",
+            "deactivated": "<big></big> "
         }
     },
     "tray": {
@@ -70,11 +70,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "<big>﬙</big> {usage}%",
         "tooltip": true
     },
     "memory": {
-        "format": " {}%"
+        "format": "<big></big> {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -86,7 +86,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
+        "format": "<big>{icon}</big> {percent}%",
         "format-icons": ["", ""]
     },
     "battery": {
@@ -95,13 +95,13 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
+        "format": "<big>{icon}</big> {capacity}%",
+        "format-charging": "<big></big> {capacity}%",
+        "format-plugged": "<big>ﮣ</big> {capacity}%",
+        "format-alt": "<big>{icon}</big> {time} ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -117,20 +117,20 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "<big>{icon}</big> {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " MUT",
+        "format-bluetooth-muted": "<big>婢</big> {icon} {format_source}",
+        "format-muted": "<big>婢</big> MUTE",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": "",
             "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["奄", "奔", "墳"]
         },
         "on-click": "pavucontrol"
     },
