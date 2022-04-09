@@ -7,6 +7,9 @@ set -a PATH /home/yaman/.local/bin/
 set -a PATH /home/yaman/.emacs.d/bin/
 set -a PATH /home/yaman/.npm-global/bin/
 
+# set emacs as visual editor
+set VISUAL 'emacsclient -c'
+
 # init nix (taken from `https://github.com/yachi/fish-nix/blob/master/conf.d/nix.fish`)
 if test -e "$HOME/.nix-profile/etc/profile.d/nix.sh"
   eval (bash -c "source $HOME/.nix-profile/etc/profile.d/nix.sh; echo export NIX_PATH=\"\$NIX_PATH\"; echo export PATH=\"\$PATH\"")
@@ -17,7 +20,7 @@ starship init fish | source
 
 # Keybindings
 function fish_user_key_bindings
-  bind \el 'printf \n; el -G; commandline -f repaint'
+  bind \el 'echo; el -G; echo \n; commandline -f repaint'
 end
 
 # # TokyoNight Color Palette
