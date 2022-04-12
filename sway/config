@@ -84,8 +84,11 @@ client.unfocused         #17191d  #17191d  #4d5a5e  #17191d    #17191d
 # default border style
 default_border pixel 2
 default_floating_border pixel 2
-hide_edge_borders --i3 smart
+hide_edge_borders --i3 smart_no_gaps
 title_align center
+smart_gaps on
+gaps inner 8
+
 
 focus_on_window_activation focus
 
