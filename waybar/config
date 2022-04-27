@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     // "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-left": ["idle_inhibitor", "clock", "sway/mode", "sway/language"],
+    "modules-left": ["idle_inhibitor", "clock", "sway/language", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "backlight", "battery", "battery#bat2", "cpu", "memory", "tray"],
     // Modules configuration

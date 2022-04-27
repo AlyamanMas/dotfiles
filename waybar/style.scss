@@ -1,19 +1,28 @@
 @import "./scss-bare/_base16-onedark.scss";
+
 @mixin section-seg($bgcolor: $base0C, $edge: none) {
-    background-color: $bgcolor;
-    color: $base00;
+    $new-bg: adjust-color($color: $bgcolor, $alpha: -0.7);
+    $new-bg2: adjust-color($color: $bgcolor, $alpha: -0.75);
+    background: linear-gradient(180deg, $new-bg 0%, $new-bg2);
+    color: scale-color($color: $base05, $lightness: 30%);
 
     @if $edge == right {
-        border-right: 2px solid $bgcolor;
+        border-right: 0 solid $new-bg;
         border-radius: 0 20px 20px 0;
         margin-right: 0.5rem;
     } @else if $edge == left {
-        border-left: 2px solid $bgcolor;
+        border-left: 0 solid $new-bg;
         border-radius: 20px 0 0 20px;
         margin-left: 0.5rem;
+    } @else if $edge == both {
+        border: 0 solid $new-bg;
+        border-radius: 20px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 }
 
+$baseBG: #1e2127;
 $media-section-bg: $base0A;
 
 * {
@@ -25,13 +34,15 @@ $media-section-bg: $base0A;
     font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     min-height: 0;
+    margin: 0.2em 0 calc(0.2em + 1px) 0;
 }
 
 window#waybar {
     /* background-color: #000000; */
     /* background-color: #282828; */
     // background: $base00;
-    background: #1e2127;
+    background: darken($color: $baseBG, $amount: 3);
+    border-bottom: 2px solid $baseBG;
 
     /* border-bottom: 3px solid #64727d80; */
     /* color: #ebdbb2; */
@@ -88,8 +99,10 @@ window#waybar.solo {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 #mode {
-    background-color: $base01;
-    border-bottom: 3px solid $base04;
+    // background-color: $base01;
+    // border-bottom: 3px solid $base04;
+
+    @include section-seg($base01, both);
 }
 
 #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
