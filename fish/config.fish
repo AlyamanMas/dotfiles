@@ -21,6 +21,7 @@ starship init fish | source
 # Keybindings
 function fish_user_key_bindings
   bind \el 'echo; el -G; echo \n; commandline -f repaint'
+  bind \eL 'echo; exa -a; echo \n; commandline -f repaint'
 end
 
 # # TokyoNight Color Palette
