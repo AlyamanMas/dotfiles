@@ -221,3 +221,7 @@ wezterm/
 yarn/
 zathura/zathurarc.bak
 coc/
+tree-sitter/
+eww/scss-bare
+helix
+obsidian
