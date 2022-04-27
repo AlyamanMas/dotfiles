@@ -48,7 +48,7 @@ font pango:Open Sans 11
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/yaman/Pictures/some-shapes-wall.png fill
+output * bg /home/yaman/.local/share/wallpapers/cat_pacman.png fill
 #
 # Example configuration:
 #
@@ -379,7 +379,7 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # init mako, the notification daemon
 exec mako >> /home/yaman/.logs/mako.log
 
-exec_always kdeconnect-indicator
+#exec_always kdeconnect-indicator
 
 exec nm-applet --indicator
 
