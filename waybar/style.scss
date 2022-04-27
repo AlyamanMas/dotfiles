@@ -1,5 +1,8 @@
 @import "./scss-bare/_base16-onedark.scss";
 
+$baseBG: #1e2127;
+$media-section-bg: $base0A;
+
 @mixin section-seg($bgcolor: $base0C, $edge: none) {
     $new-bg: adjust-color($color: $bgcolor, $alpha: -0.7);
     $new-bg2: adjust-color($color: $bgcolor, $alpha: -0.75);
@@ -22,8 +25,25 @@
     }
 }
 
-$baseBG: #1e2127;
-$media-section-bg: $base0A;
+@mixin eye-seg($bgcolor: $baseBG, $edge: none) {
+    background: $bgcolor;
+    color: $base05;
+
+    $seg-margin: 0.6rem;
+
+    margin-bottom: -0.6rem;
+    padding-bottom: 0.3rem;
+
+    @if $edge == right {
+        border-right: 0 solid $bgcolor;
+        border-radius: 0 0.6rem 0 0;
+        margin-right: $seg-margin;
+    } @else if $edge == left {
+        border-left: 0 solid $bgcolor;
+        border-radius: 0.6rem 0 0 0;
+        margin-left: $seg-margin;
+    }
+}
 
 * {
     border: none;
@@ -34,7 +54,7 @@ $media-section-bg: $base0A;
     font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     min-height: 0;
-    margin: 0.2em 0 calc(0.2em + 1px) 0;
+    margin: 0.2rem 0 calc(0.2rem + 1px) 0;
 }
 
 window#waybar {
@@ -105,7 +125,7 @@ window#waybar.solo {
     @include section-seg($base01, both);
 }
 
-#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
+#clock, #language, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
     padding: 0 10px;
     margin: 0 0px;
 
@@ -131,6 +151,7 @@ window#waybar.solo {
 
 #clock {
     /* background-color: #64727D; */
+    @include eye-seg($edge: right);
 }
 
 #battery {
@@ -237,20 +258,22 @@ label:focus {
     // border-radius: 18px 0 0 18px;
     // border-left: 2px solid $base05;
     @include section-seg($base01, left);
-    font-family: sans-serif;
-    padding-left: 10px;
-    margin-top: -2px;
+    // font-family: sans-serif;
+    // padding-left: 10px;
+    // margin-top: -2px;
 }
 
 #idle_inhibitor {
-    /* background-color: #2d3436; */
+    // background-color: $baseBG;
+    // margin-bottom: -0.4rem;
+    @include eye-seg($edge: left);
 
-    &.activated {
-        background-color: $base05;
-        color: $base00;
-        border-radius: 0 0 18px 0;
-        padding-right: 12px;
-    }
+    // &.activated {
+    //     background-color: $base05;
+    //     color: $base00;
+    //     border-radius: 0 0 18px 0;
+    //     padding-right: 12px;
+    // }
 }
 
 #mpd {
@@ -271,15 +294,18 @@ label:focus {
 }
 
 #language {
+    
+    @include eye-seg();
+
     /* background-color: #3b4252; */
-    border-radius: 0;
+    // border-radius: 0;
 
-    /* background: #00b093; */
-    /* color: #740864; */
-    padding: 0 5px 0 0;
+    // /* background: #00b093; */
+    // /* color: #740864; */
+    // padding: 0 5px 0 0;
 
-    /* margin: 0 5px; */
-    min-width: 16px;
+    // /* margin: 0 5px; */
+    // min-width: 16px;
 }
 
 // fix backlight being a bit more aligned to the top than the others

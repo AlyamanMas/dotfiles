@@ -5,7 +5,7 @@
   font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
   font-size: 12px;
   min-height: 0;
-  margin: 0.2em 0 calc(0.2em + 1px) 0; }
+  margin: 0.2rem 0 calc(0.2rem + 1px) 0; }
 
 window#waybar {
   /* background-color: #000000; */
@@ -57,7 +57,7 @@ window#waybar.solo {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
-#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
+#clock, #language, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
   padding: 0 10px;
   margin: 0 0px;
   /* color: #ebdbb2; */
@@ -75,7 +75,14 @@ window#waybar.solo {
   margin-right: 0; }
 
 #clock {
-  /* background-color: #64727D; */ }
+  /* background-color: #64727D; */
+  background: #1e2127;
+  color: #abb2bf;
+  margin-bottom: -0.6rem;
+  padding-bottom: 0.3rem;
+  border-right: 0 solid #1e2127;
+  border-radius: 0 0.6rem 0 0;
+  margin-right: 0.6rem; }
 
 #battery {
   background: linear-gradient(180deg, rgba(86, 182, 194, 0.3) 0%, rgba(86, 182, 194, 0.25));
@@ -168,18 +175,16 @@ label:focus {
   color: #c4c9d2;
   border-left: 0 solid rgba(53, 59, 69, 0.3);
   border-radius: 20px 0 0 20px;
-  margin-left: 0.5rem;
-  font-family: sans-serif;
-  padding-left: 10px;
-  margin-top: -2px; }
+  margin-left: 0.5rem; }
 
 #idle_inhibitor {
-  /* background-color: #2d3436; */ }
-  #idle_inhibitor.activated {
-    background-color: #abb2bf;
-    color: #282c34;
-    border-radius: 0 0 18px 0;
-    padding-right: 12px; }
+  background: #1e2127;
+  color: #abb2bf;
+  margin-bottom: -0.6rem;
+  padding-bottom: 0.3rem;
+  border-left: 0 solid #1e2127;
+  border-radius: 0.6rem 0 0 0;
+  margin-left: 0.6rem; }
 
 #mpd {
   background-color: #61afef;
@@ -192,13 +197,11 @@ label:focus {
     background-color: #353b45; }
 
 #language {
-  /* background-color: #3b4252; */
-  border-radius: 0;
-  /* background: #00b093; */
-  /* color: #740864; */
-  padding: 0 5px 0 0;
-  /* margin: 0 5px; */
-  min-width: 16px; }
+  background: #1e2127;
+  color: #abb2bf;
+  margin-bottom: -0.6rem;
+  padding-bottom: 0.3rem;
+  /* background-color: #3b4252; */ }
 
 label#backlight {
   padding-top: 2px; }
