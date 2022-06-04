@@ -1,6 +1,6 @@
 [Added Associations]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;org.pwmt.zathura-pdf-mupdf.desktop;calibre-ebook-edit.desktop;calibre-ebook-viewer.desktop;calibre-gui.desktop;okularApplication_epub.desktop;org.kde.ark.desktop;org.gnome.Nautilus.desktop;pqiv.desktop;
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;okularApplication_pdf.desktop;libreoffice-draw.desktop;wine-extension-pdf.desktop;brave-browser.desktop;krita_pdf.desktop;org.kde.itinerary.desktop;org.gnome.Evince.desktop;firefox.desktop;gimp.desktop;pqiv.desktop;org.inkscape.Inkscape.desktop;
+application/pdf=okularApplication_pdf.desktop;org.pwmt.zathura-pdf-mupdf.desktop;libreoffice-draw.desktop;wine-extension-pdf.desktop;brave-browser.desktop;krita_pdf.desktop;org.kde.itinerary.desktop;org.gnome.Evince.desktop;firefox.desktop;pqiv.desktop;org.inkscape.Inkscape.desktop;org.gimp.GIMP.desktop;com.github.xournalpp.xournalpp.desktop;com.github.Eloston.UngoogledChromium.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
@@ -18,10 +18,11 @@ video/x-matroska=mpv.desktop;pqiv.desktop;org.kde.dragonplayer.desktop;org.xfce.
 x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-FYO8L1.desktop;
 
 [Default Applications]
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+application/pdf=okularApplication_pdf.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
@@ -40,3 +41,4 @@ x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-FYO8L1.desktop
