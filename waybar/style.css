@@ -2,7 +2,8 @@
   border: none;
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: monospace; */
-  font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
+  font-weight:500;
   font-size: 12px;
   min-height: 0;
   margin: 0.2rem 0 calc(0.2rem + 1px) 0; }
@@ -78,6 +79,7 @@ window#waybar.solo {
   /* background-color: #64727D; */
   background: #1e2127;
   color: #abb2bf;
+  padding-right: 1.8em;
   margin-bottom: -0.6rem;
   padding-bottom: 0.3rem;
   border-right: 0 solid #1e2127;
@@ -180,6 +182,7 @@ label:focus {
 #idle_inhibitor {
   background: #1e2127;
   color: #abb2bf;
+  padding-left: 1.5rem;
   margin-bottom: -0.6rem;
   padding-bottom: 0.3rem;
   border-left: 0 solid #1e2127;
@@ -200,8 +203,7 @@ label:focus {
   background: #1e2127;
   color: #abb2bf;
   margin-bottom: -0.6rem;
-  padding-bottom: 0.3rem;
-  /* background-color: #3b4252; */ }
+  padding-bottom: 0.3rem; }
 
 label#backlight {
   padding-top: 2px; }

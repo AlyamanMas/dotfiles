@@ -3,12 +3,14 @@
 $baseBG: #1e2127;
 $media-section-bg: $base0A;
 
+// TODO: use maps to map section elements
 @mixin section-seg($bgcolor: $base0C, $edge: none) {
     $new-bg: adjust-color($color: $bgcolor, $alpha: -0.7);
     $new-bg2: adjust-color($color: $bgcolor, $alpha: -0.75);
     background: linear-gradient(180deg, $new-bg 0%, $new-bg2);
     color: scale-color($color: $base05, $lightness: 30%);
 
+    // TODO: simplify using interpolation
     @if $edge == right {
         border-right: 0 solid $new-bg;
         border-radius: 0 20px 20px 0;
@@ -51,7 +53,8 @@ $media-section-bg: $base0A;
 
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: monospace; */
-    font-family: "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Roboto", "Iosevka Extended" , "Iosevka Term SS05 Extended", "Fira Sans", "Iosevka Aile", "Cantarell", "Font Awesome 5 Brands", "Font Awesome 5 Free", "Font Awesome", "Iosevka Nerd Font", "Iosevka Term SS05", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
     font-size: 12px;
     min-height: 0;
     margin: 0.2rem 0 calc(0.2rem + 1px) 0;
@@ -296,16 +299,6 @@ label:focus {
 #language {
     
     @include eye-seg();
-
-    /* background-color: #3b4252; */
-    // border-radius: 0;
-
-    // /* background: #00b093; */
-    // /* color: #740864; */
-    // padding: 0 5px 0 0;
-
-    // /* margin: 0 5px; */
-    // min-width: 16px;
 }
 
 // fix backlight being a bit more aligned to the top than the others
