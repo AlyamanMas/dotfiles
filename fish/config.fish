@@ -6,6 +6,8 @@ set -a PATH /home/yaman/.emacs.d/bin/
 set -a PATH /home/yaman/.local/bin/
 set -a PATH /home/yaman/.emacs.d/bin/
 set -a PATH /home/yaman/.npm-global/bin/
+# set -a PATH /var/lib/flatpak/exports/bin/
+# set -a PATH ~/.local/share/flatpak/exports/bin/
 
 # set emacs as visual editor
 set VISUAL 'emacsclient -c'
