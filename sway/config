@@ -18,14 +18,14 @@ set $preferred_editor emacsclient -c
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu dmenu_path | bemenu | xargs swaymsg exec --
+set $menu dmenu_path | bemenu | xargs swaymsg exec --
 # nord
 # set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '2e3440ff' -t 'eceff4ff' -m 'bf616aff' -s '8fbcbbff' -S '4c566aff' | xargs swaymsg exec --
 # gruvbox
 # set $menu dmenu_path | fuzzel -d -I -l 20 -w 50 -b '282828ff' -t 'ebdbb2ff' -m 'fb4934ff' -s '3c3836ff' -S 'fbf1c7ff' -C 'a89984ff' -f "Iosevka SS05" | xargs swaymsg exec --
 # set $menu kickoff
 for_window [title="sway-launcher-desktop"] floating enable, sticky enable, resize set 40 ppt 70 ppt, border pixel 1
-set $menu exec footclient -T sway-launcher-desktop sway-launcher-desktop
+# set $menu exec footclient -T sway-launcher-desktop sway-launcher-desktop
 
 # TODO: make this use an open term instead of launching one, fix piping to swaymsg
 # for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 60 ppt 80 ppt, border pixel 10
@@ -384,7 +384,7 @@ exec mako >> /home/yaman/.logs/mako.log
 exec nm-applet --indicator
 
 # import session vars into dbus to fix screen share through WebRTC
-exec fix-screen-share.sh
+# exec fix-screen-share.sh
 
 # Clipboard manager
 exec wl-paste -t text --watch clipman store
@@ -397,13 +397,16 @@ exec foot --server
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-  gsettings set $gnome-schema gtk-theme 'Materia-dark'
+  gsettings set $gnome-schema gtk-theme 'Colloid-dark'
   # gsettings set $gnome-schema gtk-theme 'oomox-gruvbox-dark-hard-custom'
+  # TODO: fix icon theme to colloid
   gsettings set $gnome-schema icon-theme 'Tela-dark'
   gsettings set $gnome-schema cursor-theme 'Breeze_Snow'
   gsettings set $gnome-schema font-name 'Open Sans 11'
   gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
   gsettings set org.gnome.desktop.interface monospace-font-name "Iosevka SS05 10"
 }
+
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # }}}
