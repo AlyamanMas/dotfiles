@@ -120,7 +120,7 @@
         "format": "<big>{icon}</big>    {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "<big>婢</big> {icon} {format_source}",
-        "format-muted": "<big>婢</big> MUTE",
+        "format-muted": "<big>婢</big>   MUTE",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {

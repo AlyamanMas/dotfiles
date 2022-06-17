@@ -2,8 +2,8 @@
   border: none;
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: monospace; */
-  font-family: "Roboto", "Iosevka Extended" , "Iosevka Term SS05 Extended", Fira Sans, Iosevka Aile, Cantarell, "Font Awesome 5 Brands", "Font Awesome 5 Free", Font Awesome, Iosevka Nerd Font, "Iosevka Term SS05", Roboto, Helvetica, Arial, sans-serif;
-  font-weight:500;
+  font-family: "Roboto", "Iosevka Extended" , "Iosevka Term SS05 Extended", "Fira Sans", "Iosevka Aile", "Cantarell", "Font Awesome 5 Brands", "Font Awesome 5 Free", "Font Awesome", "Iosevka Nerd Font", "Iosevka Term SS05", "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   min-height: 0;
   margin: 0.2rem 0 calc(0.2rem + 1px) 0; }
@@ -11,11 +11,11 @@
 window#waybar {
   /* background-color: #000000; */
   /* background-color: #282828; */
-  background: #171a1e;
-  border-bottom: 2px solid #1e2127;
+  background: black;
+  border-bottom: 2px solid #000;
   /* border-bottom: 3px solid #64727d80; */
   /* color: #ebdbb2; */
-  color: #abb2bf;
+  color: #EEFFFF;
   transition-property: background-color;
   transition-duration: .5s; }
   window#waybar.hidden {
@@ -51,9 +51,9 @@ window#waybar.solo {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #mode {
-  background: linear-gradient(180deg, rgba(53, 59, 69, 0.3) 0%, rgba(53, 59, 69, 0.25));
-  color: #c4c9d2;
-  border: 0 solid rgba(53, 59, 69, 0.3);
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0) 0%, rgba(48, 48, 48, 0.1));
+  color: rgba(238, 255, 255, 0.7);
+  border: 0 solid rgba(48, 48, 48, 0);
   border-radius: 20px;
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
@@ -62,7 +62,7 @@ window#waybar.solo {
   padding: 0 10px;
   margin: 0 0px;
   /* color: #ebdbb2; */
-  color: #abb2bf; }
+  color: #EEFFFF; }
 
 #window, #workspaces {
   margin: 0 4px; }
@@ -77,27 +77,28 @@ window#waybar.solo {
 
 #clock {
   /* background-color: #64727D; */
-  background: #1e2127;
-  color: #abb2bf;
-  padding-right: 1.8em;
+  background: #000;
+  color: #EEFFFF;
   margin-bottom: -0.6rem;
   padding-bottom: 0.3rem;
-  border-right: 0 solid #1e2127;
+  border-right: 0 solid #000;
   border-radius: 0 0.6rem 0 0;
-  margin-right: 0.6rem; }
+  margin-right: 0.6rem;
+  padding-right: 1.8em;
+  padding-left: 1em; }
 
 #battery {
-  background: linear-gradient(180deg, rgba(86, 182, 194, 0.3) 0%, rgba(86, 182, 194, 0.25));
-  color: #c4c9d2;
-  border-left: 0 solid rgba(86, 182, 194, 0.3);
+  background: linear-gradient(180deg, rgba(137, 221, 255, 0) 0%, rgba(137, 221, 255, 0.1));
+  color: rgba(238, 255, 255, 0.7);
+  border-left: 0 solid rgba(137, 221, 255, 0);
   border-radius: 20px 0 0 20px;
   margin-left: 0.5rem; }
   #battery.charging, #battery.plugged {
     /* color: #ebdbb2; */
     /* background-color: #26A65B; */ }
   #battery.critical:not(.charging) {
-    background-color: #e06c75;
-    color: #abb2bf;
+    background-color: #F07178;
+    color: #EEFFFF;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -106,8 +107,8 @@ window#waybar.solo {
 
 @keyframes blink {
   to {
-    background-color: #abb2bf;
-    color: #282c34;
+    background-color: #EEFFFF;
+    color: #212121;
     /* background-color: #ebdbb2; */
     /* color: #000000; */ } }
 label:focus {
@@ -116,14 +117,14 @@ label:focus {
 #cpu {
   /* background-color: #2ecc71; */
   /* color: #000000; */
-  background: linear-gradient(180deg, rgba(86, 182, 194, 0.3) 0%, rgba(86, 182, 194, 0.25));
-  color: #c4c9d2; }
+  background: linear-gradient(180deg, rgba(137, 221, 255, 0) 0%, rgba(137, 221, 255, 0.1));
+  color: rgba(238, 255, 255, 0.7); }
 
 #memory {
   /* background-color: #9b59b6; */
-  background: linear-gradient(180deg, rgba(86, 182, 194, 0.3) 0%, rgba(86, 182, 194, 0.25));
-  color: #c4c9d2;
-  border-right: 0 solid rgba(86, 182, 194, 0.3);
+  background: linear-gradient(180deg, rgba(137, 221, 255, 0) 0%, rgba(137, 221, 255, 0.1));
+  color: rgba(238, 255, 255, 0.7);
+  border-right: 0 solid rgba(137, 221, 255, 0);
   border-radius: 0 20px 20px 0;
   margin-right: 0.5rem; }
 
@@ -132,9 +133,9 @@ label:focus {
 
 #backlight {
   /* background-color: #90b1b1; */
-  background: linear-gradient(180deg, rgba(229, 192, 123, 0.3) 0%, rgba(229, 192, 123, 0.25));
-  color: #c4c9d2;
-  border-right: 0 solid rgba(229, 192, 123, 0.3);
+  background: linear-gradient(180deg, rgba(255, 203, 107, 0) 0%, rgba(255, 203, 107, 0.1));
+  color: rgba(238, 255, 255, 0.7);
+  border-right: 0 solid rgba(255, 203, 107, 0);
   border-radius: 0 20px 20px 0;
   margin-right: 0.5rem; }
 
@@ -147,9 +148,9 @@ label:focus {
   /* background-color: #f1c40f; */
   /* color: #000000; */
   /* border-left: 2px solid #ebdbb2; */
-  background: linear-gradient(180deg, rgba(229, 192, 123, 0.3) 0%, rgba(229, 192, 123, 0.25));
-  color: #c4c9d2;
-  border-left: 0 solid rgba(229, 192, 123, 0.3);
+  background: linear-gradient(180deg, rgba(255, 203, 107, 0) 0%, rgba(255, 203, 107, 0.1));
+  color: rgba(238, 255, 255, 0.7);
+  border-left: 0 solid rgba(255, 203, 107, 0);
   border-radius: 20px 0 0 20px;
   margin-left: 0.5rem; }
   #pulseaudio.muted {
@@ -173,35 +174,36 @@ label:focus {
 #tray {
   /* background-color: #3b4252; */
   /* background-color: #2980b9; */
-  background: linear-gradient(180deg, rgba(53, 59, 69, 0.3) 0%, rgba(53, 59, 69, 0.25));
-  color: #c4c9d2;
-  border-left: 0 solid rgba(53, 59, 69, 0.3);
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0) 0%, rgba(48, 48, 48, 0.1));
+  color: rgba(238, 255, 255, 0.7);
+  border-left: 0 solid rgba(48, 48, 48, 0);
   border-radius: 20px 0 0 20px;
   margin-left: 0.5rem; }
 
 #idle_inhibitor {
-  background: #1e2127;
-  color: #abb2bf;
-  padding-left: 1.5rem;
+  background: #000;
+  color: #EEFFFF;
   margin-bottom: -0.6rem;
   padding-bottom: 0.3rem;
-  border-left: 0 solid #1e2127;
+  border-left: 0 solid #000;
   border-radius: 0.6rem 0 0 0;
-  margin-left: 0.6rem; }
+  margin-left: 0.6rem;
+  padding-right: 1.8em;
+  padding-left: 1.8em; }
 
 #mpd {
-  background-color: #61afef;
-  color: #282c34; }
+  background-color: #82AAFF;
+  color: #212121; }
   #mpd.disconnected {
-    background-color: #e06c75; }
+    background-color: #F07178; }
   #mpd.stopped {
-    background-color: #c678dd; }
+    background-color: #C792EA; }
   #mpd.paused {
-    background-color: #353b45; }
+    background-color: #303030; }
 
 #language {
-  background: #1e2127;
-  color: #abb2bf;
+  background: #000;
+  color: #EEFFFF;
   margin-bottom: -0.6rem;
   padding-bottom: 0.3rem; }
 

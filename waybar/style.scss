@@ -1,14 +1,15 @@
-@import "./scss-bare/_base16-onedark.scss";
+@import "./scss-bare/_base16-material-darker.scss";
 
-$baseBG: #1e2127;
+$baseBG: #000;
 $media-section-bg: $base0A;
 
 // TODO: use maps to map section elements
 @mixin section-seg($bgcolor: $base0C, $edge: none) {
-    $new-bg: adjust-color($color: $bgcolor, $alpha: -0.7);
-    $new-bg2: adjust-color($color: $bgcolor, $alpha: -0.75);
+    $new-bg: adjust-color($color: $bgcolor, $alpha: -1);
+    $new-bg2: adjust-color($color: $bgcolor, $alpha: -0.9);
     background: linear-gradient(180deg, $new-bg 0%, $new-bg2);
-    color: scale-color($color: $base05, $lightness: 30%);
+    // color: scale-color($color: $base05, $lightness: -30%);
+    color: adjust-color($color: $base05, $alpha: -0.3);
 
     // TODO: simplify using interpolation
     @if $edge == right {
@@ -40,10 +41,14 @@ $media-section-bg: $base0A;
         border-right: 0 solid $bgcolor;
         border-radius: 0 0.6rem 0 0;
         margin-right: $seg-margin;
+        padding-right: 1.8em;
+        padding-left: 1em;
     } @else if $edge == left {
         border-left: 0 solid $bgcolor;
         border-radius: 0.6rem 0 0 0;
         margin-left: $seg-margin;
+        padding-right: 1.8em;
+        padding-left: 1.8em;
     }
 }
 

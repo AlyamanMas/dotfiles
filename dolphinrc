@@ -52,6 +52,9 @@ eDP-1 YPosition 1366x768=0
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs
 
+[Search]
+Location=Everywhere
+
 [SettingsDialog]
 eDP-1 Height 1366x768=549
 eDP-1 Width 1366x768=679
